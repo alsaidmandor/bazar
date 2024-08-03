@@ -1,0 +1,9 @@
+flutter_native_splash:
+  #  for create
+  # dart run flutter_native_splash:create --path=flutter_native_splash.yaml
+  color: '#54408C'
+  image: assets/images/app_logo.png
+
+  android_12:
+    image: assets/images/app_logo.png
+    color: "#54408C"
