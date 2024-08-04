@@ -125,7 +125,7 @@ class TextStyles {
   static TextStyle fontBody16BlackMedium = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.medium,
-    color: AppColor.greyScale400,
+    color: AppColor.greyScale900,
   );
 
   // Roboto (Regular)

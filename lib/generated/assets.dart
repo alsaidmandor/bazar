@@ -2,7 +2,6 @@
 class Assets {
   Assets._();
 
-  static const String iconsIconx = 'assets/icons/icon _x.svg';
   static const String iconsIconArrowLeftOutline = 'assets/icons/icon_arrow_left_outline.svg';
   static const String iconsIconArrowRight2 = 'assets/icons/icon_arrow_right_2.svg';
   static const String iconsIconBellOutline = 'assets/icons/icon_bell_outline.svg';
@@ -41,7 +40,11 @@ class Assets {
   static const String iconsIconSearch = 'assets/icons/icon_search.svg';
   static const String iconsIconStar = 'assets/icons/icon_star.svg';
   static const String iconsIconWalletFill = 'assets/icons/icon_wallet_fill.svg';
+  static const String iconsIconX = 'assets/icons/icon_x.svg';
   static const String iconsPath4542 = 'assets/icons/path4542.svg';
+  static const String imagesAppLogo = 'assets/images/app_logo.png';
+  static const String imagesAppLogos = 'assets/images/appLogos.png';
   static const String imagesLogoSplash = 'assets/images/logo_splash.png';
+  static const String imagesSpalshLogo = 'assets/images/spalsh_logo.png';
 
 }

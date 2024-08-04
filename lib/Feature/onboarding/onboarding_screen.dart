@@ -1,3 +1,4 @@
+import 'package:bazaar/core/helper/extensions.dart';
 import 'package:bazaar/core/theme/styles.dart';
 import 'package:bazaar/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../core/helper/spacing.dart';
+import '../../core/routing/routes.dart';
 import '../../core/theme/colors.dart';
 import '../../core/widgets/svg_image.dart';
 
@@ -27,10 +29,8 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
   List<BoardModel>? list;
 
   void submit() {
-    // navigateAndFinish(
-    //   widget: LoginScreen(),
-    //   context: context,
-    // );
+    context.pushNamedAndRemoveUntil(Routes.loginScreen, predicate: (route) => false,);
+
   }
 
   @override
@@ -76,7 +76,9 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                   buttonText: 'skip',
                   textStyle: TextStyles.fontBody14BlackMedium
                       .copyWith(color: AppColor.primary500),
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamedAndRemoveUntil(Routes.loginScreen, predicate: (route) => false,);
+                  },
                   backgroundColor: Colors.transparent,
                   buttonWidth: 50,
                 ),
@@ -116,7 +118,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                               padding: const EdgeInsetsDirectional.only(
                                   start: 20.0, end: 20.0),
                               child: Center(
-                                child: Container(
+                                child: SizedBox(
                                   width: 250,
                                   child: Column(
                                     crossAxisAlignment:
@@ -196,7 +198,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                     ),
                     verticalSpace(15),
                     AppTextButton(
-                      buttonText: 'Continue',
+                      buttonText: isLast?'Get Started':'Continue',
                       textStyle: TextStyles.fontHeading16BlackBold.copyWith(color: AppColor.white),
                       onPressed: () {
                         if (isLast) {
@@ -213,7 +215,9 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                     AppTextButton(
                         buttonText: 'Sign In',
                         textStyle: TextStyles.fontHeading16BlackBold.copyWith(color: AppColor.primary500),
-                        onPressed: () {},
+                        onPressed: () {
+                          context.pushNamedAndRemoveUntil(Routes.loginScreen, predicate: (route) => false,);
+                        },
                       backgroundColor: Colors.transparent,
                     ),
                   ],
