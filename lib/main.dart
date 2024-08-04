@@ -1,3 +1,4 @@
+import 'package:bazaar/bazar_app.dart';
 import 'package:flutter/material.dart';
 
 void main() {
