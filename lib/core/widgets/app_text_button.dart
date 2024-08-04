@@ -1,3 +1,4 @@
+import 'package:bazaar/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -27,7 +28,7 @@ class AppTextButton extends StatelessWidget {
     required this.buttonText,
     required this.textStyle,
     required this.onPressed,
-    this.colorBorderSide = Colors.grey,
+    this.colorBorderSide =AppColor.greyScale50,
     this.child,
   });
 
@@ -48,7 +49,7 @@ class AppTextButton extends StatelessWidget {
         backgroundColor: WidgetStatePropertyAll(
           isBorderSide!
               ? Colors.transparent
-              : backgroundColor ?? Theme.of(context).primaryColor,
+              : backgroundColor ?? AppColor.primary500,
         ),
         padding: WidgetStateProperty.all<EdgeInsets>(
           EdgeInsets.symmetric(
