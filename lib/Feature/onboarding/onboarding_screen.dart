@@ -19,7 +19,7 @@ class BoardModel {
 }
 
 class OnBoardScreen extends StatefulWidget {
-  const OnBoardScreen({Key? key}) : super(key: key);
+  const OnBoardScreen({super.key});
 
   @override
   _OnBoardScreenState createState() => _OnBoardScreenState();

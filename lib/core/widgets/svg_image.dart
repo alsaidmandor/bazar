@@ -9,13 +9,13 @@ class SvgImage extends StatelessWidget {
   final BoxFit? fit; // Add BoxFit for image fitting
 
   const SvgImage({
-    Key? key,
+    super.key,
     required this.assetPath,
     this.width,
     this.height,
     this.color,
     this.fit, // Add fit parameter
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

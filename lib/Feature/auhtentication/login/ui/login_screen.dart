@@ -1,11 +1,9 @@
 import 'package:bazaar/Feature/auhtentication/login/ui/widgets/dont_have_account_text.dart';
 import 'package:bazaar/Feature/auhtentication/login/ui/widgets/email_and_password.dart';
 import 'package:bazaar/Feature/auhtentication/login/ui/widgets/login_bloc_listener.dart';
-import 'package:bazaar/Feature/auhtentication/login/ui/widgets/terms_and_conditions_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/helper/spacing.dart';
 import '../../../../core/theme/colors.dart';
@@ -15,7 +13,7 @@ import '../../../../core/widgets/svg_image.dart';
 import '../logic/cubit/login_cubit.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

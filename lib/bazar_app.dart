@@ -8,7 +8,7 @@ import 'core/theme/colors.dart';
 
 class BazaarApp extends StatelessWidget {
   final AppRouter appRouter;
-  const BazaarApp({Key? key, required this.appRouter}) : super(key: key);
+  const BazaarApp({super.key, required this.appRouter});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class BazaarApp extends StatelessWidget {
         ),
         initialRoute: Routes.onBoardingScreen,
         onGenerateRoute: appRouter.generateRoute,
-        home: OnBoardScreen(),
+        home: const OnBoardScreen(),
       ),
     );
   }
