@@ -1,4 +1,6 @@
 import 'package:bazaar/Feature/auhtentication/login/ui/login_screen.dart';
+import 'package:bazaar/Feature/auhtentication/signup/logic/sign_up_cubit.dart';
+import 'package:bazaar/Feature/auhtentication/signup/ui/sign_up_screen.dart';
 import 'package:bazaar/Feature/onboarding/onboarding_screen.dart';
 import 'package:bazaar/core/routing/routes.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +26,13 @@ class AppRouter {
             child: const LoginScreen(),
           ),
           );
-
+      case Routes.signUpScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => SignupCubit(),
+            child: const SignupScreen(),
+          ),
+        );
       default:
         return null;
     }

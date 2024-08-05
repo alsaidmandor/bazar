@@ -7,8 +7,8 @@ import '../../../../../core/theme/colors.dart';
 import '../../../../../core/theme/styles.dart';
 
 
-class DontHaveAccountText extends StatelessWidget {
-  const DontHaveAccountText({super.key});
+class AlreadyHaveAccountText extends StatelessWidget {
+  const AlreadyHaveAccountText({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +17,15 @@ class DontHaveAccountText extends StatelessWidget {
       text: TextSpan(
         children: [
           TextSpan(
-            text: 'Don\'t have an account?',
+            text: 'Already have an account?',
             style: TextStyles.fontBody16BlackMedium.copyWith(color: AppColor.greyScale500),
           ),
           TextSpan(
-            text: ' Sign Up',
+            text: ' Login',
             style: TextStyles.fontBody16BlackMedium.copyWith(color: AppColor.primary500),
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                context.pushReplacementNamed(Routes.signUpScreen);
+                context.pushReplacementNamed(Routes.loginScreen);
               },
           ),
         ],
