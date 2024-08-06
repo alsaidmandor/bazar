@@ -15,6 +15,7 @@ Future<void> main() async {
   );
   // flutter_screenutil
   await ScreenUtil.ensureScreenSize();
+  // to marge from dev to master fake commit
   runApp( BazaarApp(appRouter: AppRouter(),));
 }
 
