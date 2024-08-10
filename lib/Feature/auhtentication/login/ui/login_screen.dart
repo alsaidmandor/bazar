@@ -1,10 +1,10 @@
 import 'package:bazaar/Feature/auhtentication/login/ui/widgets/dont_have_account_text.dart';
 import 'package:bazaar/Feature/auhtentication/login/ui/widgets/email_and_password.dart';
 import 'package:bazaar/Feature/auhtentication/login/ui/widgets/login_bloc_listener.dart';
+import 'package:bazaar/Feature/auhtentication/login/ui/widgets/login_google_bloc_listener.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../core/helper/spacing.dart';
 import '../../../../core/theme/colors.dart';
 import '../../../../core/theme/styles.dart';
@@ -83,6 +83,9 @@ class LoginScreen extends StatelessWidget {
                     AppTextButton(
                       textStyle: TextStyles.font16WhiteMedium,
                       onPressed: () {
+                        // Navigate to Home
+                        context.read<LoginCubit>().emitGoogleSignIn(context);
+                        // Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpScreen()));
                       },
                       borderRadius: 20,
                       isBorderSide: true,
@@ -116,6 +119,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     const LoginBlocListener(),
+                    const LoginGoogleBlocListener(),
                   ],
                 ),
               ],
@@ -128,7 +132,7 @@ class LoginScreen extends StatelessWidget {
 
   void validateThenDoLogin(BuildContext context) {
     if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-      // context.read<LoginCubit>().emitLoginStates();
+      context.read<LoginCubit>().emitLoginStates();
     }
   }
 }

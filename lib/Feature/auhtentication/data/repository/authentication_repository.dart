@@ -11,17 +11,20 @@ class AuthenticationRepository {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   late String verificationId;
+
   // Email/Password Authentication
-  Future<UserCredential> signInWithEmailAndPassword(
-      String email, String password) async {
+  Future<FirebaseResult<UserCredential>> signInWithEmailAndPassword(
+      {required String email, required String password}) async {
     try {
-      return await _auth.signInWithEmailAndPassword(
+      final response = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
+      return FirebaseResult.success(response);
     } catch (e) {
-      rethrow; // Rethrow to handle errors in the calling code
+      return FirebaseResult.failure(e.toString());
     }
   }
 
+  // Create Sign up if you have account
   Future<FirebaseResult<UserCredential>> createUserWithEmailAndPassword(
       {required String email, required String password}) async {
     try {
@@ -29,7 +32,7 @@ class AuthenticationRepository {
           email: email, password: password);
       return FirebaseResult.success(response);
     } catch (e) {
-      rethrow;
+      return FirebaseResult.failure(e.toString());
     }
   }
 
@@ -50,7 +53,7 @@ class AuthenticationRepository {
   }
 
   // Google Sign-In
-  Future<UserCredential> signInWithGoogle() async {
+  Future<FirebaseResult<User?>> signInWithGoogle(BuildContext context) async {
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
       final GoogleSignInAuthentication? googleAuth =
@@ -60,41 +63,21 @@ class AuthenticationRepository {
         accessToken: googleAuth?.accessToken,
         idToken: googleAuth?.idToken,
       );
+      if (currentUser != null) {
+        linkWithCredential(currentUser!, credential);
+      } else {
+        await _auth.signInWithCredential(credential);
 
-      return await _auth.signInWithCredential(credential);
+        // NavigateInterface.navigateToPage();
+        context.pushNamed(
+          Routes.signUpPhoneScreen,
+        );
+      }
+      return FirebaseResult.success(currentUser);
     } catch (e) {
-      rethrow;
+      return FirebaseResult.failure(e.toString());
     }
   }
-
-  // Phone Authentication
-/*
-  Future<void> verifyPhoneNumber(String phoneNumber) async {
-    try {
-      await _auth.verifyPhoneNumber(
-        phoneNumber: phoneNumber,
-        verificationCompleted: (PhoneAuthCredential credential) async {
-          // Auto-complete verification if possible
-          await _auth.signInWithCredential(credential);
-        },
-        verificationFailed: (FirebaseAuthException e) {
-          // Handle verification errors
-          print('Phone number verification failed: ${e.message}');
-        },
-        codeSent: (String verificationId, int? resendToken) {
-          // Store the verification ID for later use
-          // ...
-        },
-        codeAutoRetrievalTimeout: (String verificationId) {
-          // Handle timeout
-          // ...
-        },
-      );
-    } catch (e) {
-      rethrow;
-    }
-  }
-*/
 
   Future<UserCredential> signInWithCredential(
       PhoneAuthCredential credential) async {
@@ -104,6 +87,7 @@ class AuthenticationRepository {
       rethrow;
     }
   }
+
   // Phone Authentication
 
   Future<void> submitPhoneNumber(
