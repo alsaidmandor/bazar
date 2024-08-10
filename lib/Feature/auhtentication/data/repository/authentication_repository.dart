@@ -36,17 +36,19 @@ class AuthenticationRepository {
     }
   }
 
-  Future<void> sendPasswordResetEmail(String email) async {
+  Future<FirebaseResult<User?>> sendPasswordResetEmail(String email) async {
     try {
       await _auth.sendPasswordResetEmail(email: email);
+      return FirebaseResult.success(currentUser);
     } catch (e) {
-      rethrow;
+      return FirebaseResult.failure(e.toString());
     }
   }
 
   Future<void> signOut() async {
     try {
       await _auth.signOut();
+      await _googleSignIn.signOut();
     } catch (e) {
       rethrow;
     }

@@ -2,10 +2,13 @@ import 'package:bazaar/Feature/auhtentication/login/ui/widgets/dont_have_account
 import 'package:bazaar/Feature/auhtentication/login/ui/widgets/email_and_password.dart';
 import 'package:bazaar/Feature/auhtentication/login/ui/widgets/login_bloc_listener.dart';
 import 'package:bazaar/Feature/auhtentication/login/ui/widgets/login_google_bloc_listener.dart';
+import 'package:bazaar/core/helper/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../../core/helper/spacing.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theme/colors.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../../core/widgets/app_text_button.dart';
@@ -45,7 +48,9 @@ class LoginScreen extends StatelessWidget {
                         'Forgot Password?',
                         style: TextStyles.fontBody14BlackSemiBold
                             .copyWith(color: AppColor.primary500),
-                      ),
+                      ).onTap(() {
+                        context.pushNamed(Routes.forgetPasswordScreen);
+                      }),
                     ),
                     verticalSpace(40),
                     AppTextButton(
@@ -60,7 +65,8 @@ class LoginScreen extends StatelessWidget {
                     verticalSpace(60),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [Expanded(
+                      children: [
+                        Expanded(
                           child: Container(
                             height: 1.0.h,
                             color: AppColor.greyScale500,
@@ -69,13 +75,15 @@ class LoginScreen extends StatelessWidget {
                         verticalSpace(32),
                         Text(
                           ' Or with ',
-                          style: TextStyles.fontBody14BlackSemiBold.copyWith(color: AppColor.greyScale500),
+                          style: TextStyles.fontBody14BlackSemiBold
+                              .copyWith(color: AppColor.greyScale500),
                         ),
                         verticalSpace(32),
                         Expanded(
                           child: Container(
                             height: 1.0.h,
-                            color: AppColor.greyScale500,),
+                            color: AppColor.greyScale500,
+                          ),
                         )
                       ],
                     ),
@@ -90,12 +98,13 @@ class LoginScreen extends StatelessWidget {
                       borderRadius: 20,
                       isBorderSide: true,
                       buttonText: '',
-
                       colorBorderSide: AppColor.primary500,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const SvgImage(assetPath: 'assets/icons/google.svg',),
+                          const SvgImage(
+                            assetPath: 'assets/icons/google.svg',
+                          ),
                           horizontalSpace(5),
                           const Text('Login with Google'),
                         ],
@@ -112,7 +121,9 @@ class LoginScreen extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const SvgImage(assetPath: 'assets/icons/apple.svg',),
+                          const SvgImage(
+                            assetPath: 'assets/icons/apple.svg',
+                          ),
                           horizontalSpace(5),
                           const Text('Login with Apple'),
                         ],
