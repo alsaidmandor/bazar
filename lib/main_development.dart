@@ -16,6 +16,7 @@ import 'firebase_options.dart';
 //  flutter run --debug -t lib/main_development.dart --flavor Development
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
 
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(

@@ -50,27 +50,6 @@ class OtpScreen extends StatelessWidget {
     );
   }
 
-  void showProgressIndicator(BuildContext context) {
-    AlertDialog alertDialog = const AlertDialog(
-      backgroundColor: Colors.transparent,
-      elevation: 0,
-      content: Center(
-        child: CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
-        ),
-      ),
-    );
-
-    showDialog(
-      barrierColor: Colors.white.withOpacity(0),
-      barrierDismissible: false,
-      context: context,
-      builder: (context) {
-        return alertDialog;
-      },
-    );
-  }
-
   Widget _buildPinCodeFields(BuildContext context) {
     return PinCodeTextField(
       appContext: context,
@@ -106,65 +85,6 @@ class OtpScreen extends StatelessWidget {
     );
   }
 
-  void _login(BuildContext context) {
-    // BlocProvider.of<PhoneAuthCubit>(context).submitOTP(otpCode);
-  }
-
-  // Widget _buildVrifyButton(BuildContext context) {
-  //   return Align(
-  //     alignment: Alignment.centerRight,
-  //     child: ElevatedButton(
-  //       onPressed: () {
-  //         showProgressIndicator(context);
-  //
-  //         _login(context);
-  //       },
-  //       child: Text(
-  //         'Verify',
-  //         style: TextStyle(color: Colors.white, fontSize: 16),
-  //       ),
-  //       style: ElevatedButton.styleFrom(
-  //         minimumSize: Size(110, 50),
-  //         primary: Colors.black,
-  //         shape: RoundedRectangleBorder(
-  //           borderRadius: BorderRadius.circular(6),
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
-  //
-  // Widget _buildPhoneVerificationBloc() {
-  //   return BlocListener<PhoneAuthCubit, PhoneAuthState>(
-  //     listenWhen: (previous, current) {
-  //       return previous != current;
-  //     },
-  //     listener: (context, state) {
-  //       if (state is Loading) {
-  //         showProgressIndicator(context);
-  //       }
-  //
-  //       if (state is PhoneOTPVerified) {
-  //         Navigator.pop(context);
-  //         Navigator.of(context).pushReplacementNamed(mapScreen);
-  //       }
-  //
-  //       if (state is ErrorOccurred) {
-  //         //Navigator.pop(context);
-  //         String errorMsg = (state).errorMsg;
-  //         ScaffoldMessenger.of(context).showSnackBar(
-  //           SnackBar(
-  //             content: Text(errorMsg),
-  //             backgroundColor: Colors.black,
-  //             duration: Duration(seconds: 3),
-  //           ),
-  //         );
-  //       }
-  //     },
-  //     child: Container(),
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -175,24 +95,26 @@ class OtpScreen extends StatelessWidget {
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 32.w, vertical: 50.h),
           child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                _buildIntroTexts(),
-                verticalSpace(88),
-                _buildPinCodeFields(context),
-                verticalSpace(60),
-                AppTextButton(
-                  buttonText: "Continue",
-                  textStyle: TextStyles.fontHeading16BlackBold
-                      .copyWith(color: AppColor.white),
-                  onPressed: () {
-                    context.read<SignupCubit>().emitSubmitOtp(
-                        verificationId: verificationId, otpCode: otpCode);
-                  },
-                ),
-                const SignupSubmitOtpBlocListener()
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  _buildIntroTexts(),
+                  verticalSpace(88),
+                  _buildPinCodeFields(context),
+                  verticalSpace(60),
+                  AppTextButton(
+                    buttonText: "Continue",
+                    textStyle: TextStyles.fontHeading16BlackBold
+                        .copyWith(color: AppColor.white),
+                    onPressed: () {
+                      context.read<SignupCubit>().emitSubmitOtp(
+                          verificationId: verificationId, otpCode: otpCode);
+                    },
+                  ),
+                  const SignupSubmitOtpBlocListener()
+                ],
+              ),
             ),
           ),
         ),

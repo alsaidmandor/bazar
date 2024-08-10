@@ -14,6 +14,7 @@ class LoginCubit extends Cubit<LoginState> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
+  final formKeyResetPassowrd = GlobalKey<FormState>();
 
   void emitLoginStates() async {
     emit(const LoginState.loading());
@@ -23,7 +24,7 @@ class LoginCubit extends Cubit<LoginState> {
     );
     response.when(success: (loginResponse) async {
       await saveUserUid(loginResponse.user!.uid ?? '');
-      emit( LoginState.success(loginResponse));
+      emit(LoginState.success(loginResponse));
     }, failure: (error) {
       emit(LoginState.error(error: error.toString() ?? ''));
     });
@@ -34,9 +35,19 @@ class LoginCubit extends Cubit<LoginState> {
     final response = await _repository.signInWithGoogle(context);
     response.when(success: (googleSignIn) async {
       await saveUserUid(googleSignIn!.uid ?? '');
-      emit( const LoginState.googleSignInSuccess());
+      emit(const LoginState.googleSignInSuccess());
     }, failure: (error) {
       emit(LoginState.googleSignInError(error: error.toString() ?? ''));
+    });
+  }
+
+  Future<void> emitResetPasswordEmail() async {
+    emit(const LoginState.resetPasswordLoading());
+    final response = await _repository.sendPasswordResetEmail(emailController.text);
+    response.when(success: (googleSignIn) async {
+      emit(const LoginState.resetPasswordSuccess());
+    }, failure: (error) {
+      emit(LoginState.resetPasswordError(error: error.toString() ?? ''));
     });
   }
 

@@ -9,6 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../Feature/auhtentication/data/repository/authentication_repository.dart';
 import '../../Feature/auhtentication/login/logic/cubit/login_cubit.dart';
+import '../../Feature/auhtentication/login/ui/forget_password_screen.dart';
 import '../../Feature/auhtentication/signup/ui/sign_up_phone_screen.dart';
 import '../../Feature/auhtentication/signup/ui/widgets/sign_up_success_verification.dart';
 
@@ -67,6 +68,13 @@ class AppRouter {
       case Routes.signUpSuccessVerification:
         return MaterialPageRoute(
           builder: (_) => const SignUpSuccessVerification(),
+        );
+      case Routes.forgetPasswordScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => LoginCubit(AuthenticationRepository()),
+            child: const ForgetPasswordScreen(),
+          ),
         );
       default:
         return null;

@@ -14,4 +14,10 @@ class LoginState<T> with _$LoginState<T> {
   const factory LoginState.googleSignInSuccess() = GoogleSignInSuccess;
   const factory LoginState.googleSignInError({required String error}) =
       GoogleSignInError;
+
+//   state reset Password
+  const factory LoginState.resetPasswordLoading() = ResetPasswordLoading;
+  const factory LoginState.resetPasswordSuccess() = ResetPasswordSuccess;
+  const factory LoginState.resetPasswordError({required String error}) =
+      ResetPasswordError;
 }
