@@ -2,18 +2,29 @@
 class Assets {
   Assets._();
 
-  static const String iconsIconArrowLeftOutline = 'assets/icons/icon_arrow_left_outline.svg';
-  static const String iconsIconArrowRight2 = 'assets/icons/icon_arrow_right_2.svg';
-  static const String iconsIconBellOutline = 'assets/icons/icon_bell_outline.svg';
+  static const String iconsApple = 'assets/icons/apple.svg';
+  static const String iconsCongrat = 'assets/icons/congrat.svg';
+  static const String iconsGoogle = 'assets/icons/google.svg';
+  static const String iconsIconArrowLeftOutline =
+      'assets/icons/icon_arrow_left_outline.svg';
+  static const String iconsIconArrowRight2 =
+      'assets/icons/icon_arrow_right_2.svg';
+  static const String iconsIconBellOutline =
+      'assets/icons/icon_bell_outline.svg';
   static const String iconsIconCalendar = 'assets/icons/icon_calendar.svg';
-  static const String iconsIconCardOutline = 'assets/icons/icon_card_outline.svg';
+  static const String iconsIconCall = 'assets/icons/icon_call.svg';
+  static const String iconsIconCardOutline =
+      'assets/icons/icon_card_outline.svg';
   static const String iconsIconCartFill = 'assets/icons/icon_cart_fill.svg';
   static const String iconsIconChat = 'assets/icons/icon_chat.svg';
   static const String iconsIconChatFill = 'assets/icons/icon_chat_fill.svg';
   static const String iconsIconCheck = 'assets/icons/icon_check.svg';
-  static const String iconsIconChevronDown = 'assets/icons/icon_chevron_down.svg';
-  static const String iconsIconChevronLeft = 'assets/icons/icon_chevron_left.svg';
-  static const String iconsIconChevronRight = 'assets/icons/icon_chevron_right.svg';
+  static const String iconsIconChevronDown =
+      'assets/icons/icon_chevron_down.svg';
+  static const String iconsIconChevronLeft =
+      'assets/icons/icon_chevron_left.svg';
+  static const String iconsIconChevronRight =
+      'assets/icons/icon_chevron_right.svg';
   static const String iconsIconChevronUp = 'assets/icons/icon_chevron_up.svg';
   static const String iconsIconDocument = 'assets/icons/icon_document.svg';
   static const String iconsIconEmailBulk = 'assets/icons/icon_email_bulk.svg';
@@ -24,27 +35,35 @@ class Assets {
   static const String iconsIconHeart = 'assets/icons/icon_heart.svg';
   static const String iconsIconHomeFill = 'assets/icons/icon_home_fill.svg';
   static const String iconsIconLocation = 'assets/icons/icon_location.svg';
-  static const String iconsIconLocationFill = 'assets/icons/icon_location_fill.svg';
-  static const String iconsIconLocationOutline = 'assets/icons/icon_location_outline.svg';
+  static const String iconsIconLocationFill =
+      'assets/icons/icon_location_fill.svg';
+  static const String iconsIconLocationOutline =
+      'assets/icons/icon_location_outline.svg';
   static const String iconsIconLoveFill = 'assets/icons/icon_love_fill.svg';
   static const String iconsIconLovesFill = 'assets/icons/icon_loves_fill.svg';
   static const String iconsIconMenuFill = 'assets/icons/icon_menu_fill.svg';
   static const String iconsIconMinus = 'assets/icons/icon_minus.svg';
-  static const String iconsIconMoonOutline = 'assets/icons/icon_moon_outline.svg';
-  static const String iconsIconPasswordOutline = 'assets/icons/icon_password_outline.svg';
+  static const String iconsIconMoonOutline =
+      'assets/icons/icon_moon_outline.svg';
+  static const String iconsIconPasswordOutline =
+      'assets/icons/icon_password_outline.svg';
   static const String iconsIconPhoneFill = 'assets/icons/icon_phone_fill.svg';
-  static const String iconsIconPhoneOutline = 'assets/icons/icon_phone_outline.svg';
+  static const String iconsIconPhoneOutline =
+      'assets/icons/icon_phone_outline.svg';
   static const String iconsIconPlus = 'assets/icons/icon_plus.svg';
   static const String iconsIconProfile = 'assets/icons/icon_profile.svg';
-  static const String iconsIconProfileFill = 'assets/icons/icon_profile_fill.svg';
+  static const String iconsIconProfileFill =
+      'assets/icons/icon_profile_fill.svg';
   static const String iconsIconSearch = 'assets/icons/icon_search.svg';
   static const String iconsIconStar = 'assets/icons/icon_star.svg';
   static const String iconsIconWalletFill = 'assets/icons/icon_wallet_fill.svg';
   static const String iconsIconX = 'assets/icons/icon_x.svg';
+  static const String iconsOnboarding1 = 'assets/icons/onboarding_1.svg';
+  static const String iconsOnboarding2 = 'assets/icons/onboarding_2.svg';
+  static const String iconsOnboarding3 = 'assets/icons/onboarding_3.svg';
   static const String iconsPath4542 = 'assets/icons/path4542.svg';
   static const String imagesAppLogo = 'assets/images/app_logo.png';
   static const String imagesAppLogos = 'assets/images/appLogos.png';
   static const String imagesLogoSplash = 'assets/images/logo_splash.png';
   static const String imagesSpalshLogo = 'assets/images/spalsh_logo.png';
-
 }

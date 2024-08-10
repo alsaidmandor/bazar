@@ -8,19 +8,19 @@ import '../../../../../core/theme/styles.dart';
 import '../../logic/sign_up_cubit.dart';
 import '../../logic/sign_up_state.dart';
 
-class SignupBlocListener extends StatelessWidget {
-  const SignupBlocListener({super.key});
+class SignupSubmitPhoneBlocListener extends StatelessWidget {
+  const SignupSubmitPhoneBlocListener({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocListener<SignupCubit, SignupState>(
       listenWhen: (previous, current) =>
-          current is SignupLoading ||
-          current is SignupSuccess ||
-          current is SignupError,
+          current is SignupSubmitPhoneNumberLoading ||
+          current is SignupSubmitPhoneNumberSuccess ||
+          current is SignupSubmitPhoneNumberError,
       listener: (context, state) {
         state.whenOrNull(
-          signupLoading: () {
+          signupSubmitPhoneNumberLoading: () {
             showDialog(
               context: context,
               builder: (context) => const Center(
@@ -30,12 +30,15 @@ class SignupBlocListener extends StatelessWidget {
               ),
             );
           },
-          signupSuccess: (signupResponse) {
-            // context.pop();
-            // showSuccessDialog(context);
-            context.pushNamed(Routes.signUpPhoneScreen);
+          signupSubmitPhoneNumberSuccess: () {
+            context.pop();
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('Send code .'),
+              ),
+            );
           },
-          signupError: (error) {
+          signupSubmitPhoneNumberError: (error) {
             setupErrorState(context, error);
           },
         );
@@ -60,12 +63,12 @@ class SignupBlocListener extends StatelessWidget {
           actions: <Widget>[
             TextButton(
               style: TextButton.styleFrom(
-                foregroundColor: Colors.white, backgroundColor: Colors.blue, disabledForegroundColor: Colors.grey.withOpacity(0.38),
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.blue,
+                disabledForegroundColor: Colors.grey.withOpacity(0.38),
               ),
               onPressed: () {
-                // context.pushNamed(Routes.loginScreen);
-                context.pushNamed(Routes.signUpPhoneScreen);
-
+                context.pushNamed(Routes.loginScreen);
               },
               child: const Text('Continue'),
             ),
@@ -96,7 +99,8 @@ class SignupBlocListener extends StatelessWidget {
             },
             child: Text(
               'Got it',
-              style: TextStyles.fontBody14BlackSemiBold.copyWith(color: AppColor.blue),
+              style: TextStyles.fontBody14BlackSemiBold
+                  .copyWith(color: AppColor.blue),
             ),
           ),
         ],

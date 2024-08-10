@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyD6py_Gb0gQQl_CWFgUpXwBdKdNeCd4pz8',
-    appId: '1:418118569494:android:0a718f78be77c457122f37',
+    appId: '1:418118569494:android:b3c817e269fb4a49122f37',
     messagingSenderId: '418118569494',
     projectId: 'bazar-d2306',
     storageBucket: 'bazar-d2306.appspot.com',
@@ -63,6 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '418118569494',
     projectId: 'bazar-d2306',
     storageBucket: 'bazar-d2306.appspot.com',
+    iosClientId: '418118569494-k9dotf8c28f7d64rgigdfts2ek1gqdtd.apps.googleusercontent.com',
     iosBundleId: 'com.example.bazaar',
   );
+
 }

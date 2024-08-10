@@ -17,12 +17,13 @@ class BazaarApp extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp(
         title: 'Bazaar App',
-
         debugShowCheckedModeBanner: false,
-
         theme: ThemeData(
           primaryColor: AppColor.primary500,
           scaffoldBackgroundColor: AppColor.white,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.transparent,
+          ),
           useMaterial3: true,
         ),
         initialRoute: Routes.onBoardingScreen,
