@@ -3,6 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/helper/shared_pref_helper.dart';
+import '../../../../core/utils/SharedPrefKeys.dart';
 import '../../data/repository/authentication_repository.dart';
 
 class SignupCubit extends Cubit<SignupState> {
@@ -20,7 +22,8 @@ class SignupCubit extends Cubit<SignupState> {
     emit(const SignupState.signupLoading());
     final response = await _authRepository.createUserWithEmailAndPassword(
         email: emailController.text, password: passwordController.text);
-    response.when(success: (signupResponse) {
+    response.when(success: (signupResponse) async {
+      await saveUserUid(signupResponse.user!.uid ?? '');
       emit(SignupState.signupSuccess(signupResponse));
     }, failure: (error) {
       emit(SignupState.signupError(error: error ?? ''));
@@ -49,5 +52,9 @@ class SignupCubit extends Cubit<SignupState> {
       debugPrint('Error linking phone number : ${e.code}');
       emit(SignupState.signupSubmitOtpError(error: e.code));
     }
+  }
+
+  Future<void> saveUserUid(String token) async {
+    await SharedPrefHelper.setData(SharedPrefKeys.userUid, token);
   }
 }
