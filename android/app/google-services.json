@@ -12,7 +12,12 @@
           "package_name": "com.example.bazaar"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "418118569494-82aotvi44gn9s2vv5k1r8b0p79qmu9jo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD6py_Gb0gQQl_CWFgUpXwBdKdNeCd4pz8"
@@ -20,7 +25,55 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418118569494-82aotvi44gn9s2vv5k1r8b0p79qmu9jo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "418118569494-k9dotf8c28f7d64rgigdfts2ek1gqdtd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bazaar"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418118569494:android:b3c817e269fb4a49122f37",
+        "android_client_info": {
+          "package_name": "com.example.bazaar.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418118569494-82aotvi44gn9s2vv5k1r8b0p79qmu9jo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6py_Gb0gQQl_CWFgUpXwBdKdNeCd4pz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418118569494-82aotvi44gn9s2vv5k1r8b0p79qmu9jo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "418118569494-k9dotf8c28f7d64rgigdfts2ek1gqdtd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bazaar"
+              }
+            }
+          ]
         }
       }
     }
