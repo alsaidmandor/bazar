@@ -185,6 +185,39 @@ class AuthenticationRepository {
     }
   }
 
+/*
+  Future<void> checkPhoneAndGoogleLinked(String email) async {
+    try {
+      final auth = FirebaseAuth.instance;
+
+      // Fetch the sign-in methods for the email
+      List<String> signInMethods = await auth.fetchSignInMethodsForEmail(email);
+
+      // Check if phone authentication is one of the sign-in methods
+      bool isPhoneLinked =
+          signInMethods.contains(PhoneAuthProvider.PHONE_SIGN_IN_METHOD);
+
+      // Check if Google authentication is one of the sign-in methods
+      bool isGoogleLinked =
+          signInMethods.contains(GoogleAuthProvider.GOOGLE_SIGN_IN_METHOD);
+
+      if (isPhoneLinked) {
+        print("Phone number is linked with this email.");
+      } else {
+        print("Phone number is not linked with this email.");
+      }
+
+      if (isGoogleLinked) {
+        print("Google account is linked with this email.");
+      } else {
+        print("Google account is not linked with this email.");
+      }
+    } catch (e) {
+      print("An error occurred: $e");
+    }
+  }
+*/
+
   // Get Current User
   User? get currentUser => _auth.currentUser;
 }

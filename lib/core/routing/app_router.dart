@@ -12,6 +12,8 @@ import '../../Feature/auhtentication/login/logic/cubit/login_cubit.dart';
 import '../../Feature/auhtentication/login/ui/forget_password_screen.dart';
 import '../../Feature/auhtentication/signup/ui/sign_up_phone_screen.dart';
 import '../../Feature/auhtentication/signup/ui/widgets/sign_up_success_verification.dart';
+import '../../Feature/home/logic/home_cubit.dart';
+import '../../Feature/home/ui/home_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -74,6 +76,13 @@ class AppRouter {
           builder: (_) => BlocProvider(
             create: (context) => LoginCubit(AuthenticationRepository()),
             child: const ForgetPasswordScreen(),
+          ),
+        );
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) =>HomeCubit(),
+            child: const HomeScreen(),
           ),
         );
       default:

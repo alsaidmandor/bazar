@@ -1,13 +1,12 @@
-import 'package:bazaar/core/widgets/svg_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/helper/spacing.dart';
 import '../../../../../core/theme/colors.dart';
+import '../../../../../core/theme/icon_broken.dart';
 import '../../../../../core/theme/styles.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
-import '../../../../../generated/assets.dart';
 import '../../logic/sign_up_cubit.dart';
 
 class SignupPhoneForm extends StatefulWidget {
@@ -47,8 +46,9 @@ class _SignupPhoneFormState extends State<SignupPhoneForm> {
                 hintText: 'Phone Number',
                 prefixIcon: Padding(
                   padding: EdgeInsets.all(15.h),
-                  child: const SvgImage(
-                    assetPath: Assets.iconsIconCall,
+                  child: Icon(
+                    IconBroken.Call,
+                    color: AppColor.primary500,
                   ),
                 ),
                 textInputType: TextInputType.phone,

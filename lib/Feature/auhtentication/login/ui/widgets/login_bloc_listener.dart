@@ -2,11 +2,11 @@ import 'package:bazaar/core/helper/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../core/routing/routes.dart';
 import '../../../../../core/theme/colors.dart';
 import '../../../../../core/theme/styles.dart';
 import '../../logic/cubit/login_cubit.dart';
 import '../../logic/cubit/login_state.dart';
-
 
 class LoginBlocListener extends StatelessWidget {
   const LoginBlocListener({super.key});
@@ -30,7 +30,7 @@ class LoginBlocListener extends StatelessWidget {
           },
           success: (loginResponse) {
             context.pop();
-            // context.pushNamed(Routes.homeScreen);
+            context.pushNamed(Routes.homeScreen);
           },
           error: (error) {
             setupErrorState(context, error);
