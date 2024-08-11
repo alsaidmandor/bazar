@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String fontIcons = 'assets/font/icons.ttf';
   static const String iconsApple = 'assets/icons/apple.svg';
   static const String iconsCongrat = 'assets/icons/congrat.svg';
   static const String iconsGoogle = 'assets/icons/google.svg';

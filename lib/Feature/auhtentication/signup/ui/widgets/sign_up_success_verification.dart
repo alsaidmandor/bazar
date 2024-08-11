@@ -1,4 +1,6 @@
+import 'package:bazaar/core/helper/extensions.dart';
 import 'package:bazaar/core/helper/spacing.dart';
+import 'package:bazaar/core/routing/routes.dart';
 import 'package:bazaar/core/theme/styles.dart';
 import 'package:bazaar/core/widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +43,7 @@ class SignUpSuccessVerification extends StatelessWidget {
               textStyle: TextStyles.fontHeading16BlackBold
                   .copyWith(color: AppColor.white),
               onPressed: () {
-                // context.pushReplacementNamed(Routes)
+                context.pushReplacementNamed(Routes.homeScreen);
               },
             )
           ],

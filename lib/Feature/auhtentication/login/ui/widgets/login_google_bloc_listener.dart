@@ -2,11 +2,11 @@ import 'package:bazaar/core/helper/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../core/routing/routes.dart';
 import '../../../../../core/theme/colors.dart';
 import '../../../../../core/theme/styles.dart';
 import '../../logic/cubit/login_cubit.dart';
 import '../../logic/cubit/login_state.dart';
-
 
 class LoginGoogleBlocListener extends StatelessWidget {
   const LoginGoogleBlocListener({super.key});
@@ -15,7 +15,9 @@ class LoginGoogleBlocListener extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<LoginCubit, LoginState>(
       listenWhen: (previous, current) =>
-          current is GoogleSignInLoading || current is GoogleSignInSuccess || current is GoogleSignInError,
+          current is GoogleSignInLoading ||
+          current is GoogleSignInSuccess ||
+          current is GoogleSignInError,
       listener: (context, state) {
         state.whenOrNull(
           loading: () {
@@ -29,8 +31,7 @@ class LoginGoogleBlocListener extends StatelessWidget {
             );
           },
           success: (loginResponse) {
-            context.pop();
-            // context.pushNamed(Routes.homeScreen);
+            context.pushNamed(Routes.homeScreen);
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
                 content: Text(' Success .'),
