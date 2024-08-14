@@ -5,7 +5,10 @@ class Assets {
   static const String fontIcons = 'assets/font/icons.ttf';
   static const String iconsApple = 'assets/icons/apple.svg';
   static const String iconsCongrat = 'assets/icons/congrat.svg';
+  static const String iconsCraneco = 'assets/icons/crane&co.svg';
+  static const String iconsGooday = 'assets/icons/gooday.svg';
   static const String iconsGoogle = 'assets/icons/google.svg';
+  static const String iconsHaymarket = 'assets/icons/haymarket.svg';
   static const String iconsIconArrowLeftOutline =
       'assets/icons/icon_arrow_left_outline.svg';
   static const String iconsIconArrowRight2 =
@@ -59,12 +62,21 @@ class Assets {
   static const String iconsIconStar = 'assets/icons/icon_star.svg';
   static const String iconsIconWalletFill = 'assets/icons/icon_wallet_fill.svg';
   static const String iconsIconX = 'assets/icons/icon_x.svg';
+  static const String iconsJstor = 'assets/icons/jstor.svg';
+  static const String iconsKuromi = 'assets/icons/kuromi.svg';
   static const String iconsOnboarding1 = 'assets/icons/onboarding_1.svg';
   static const String iconsOnboarding2 = 'assets/icons/onboarding_2.svg';
   static const String iconsOnboarding3 = 'assets/icons/onboarding_3.svg';
   static const String iconsPath4542 = 'assets/icons/path4542.svg';
+  static const String iconsPeloton = 'assets/icons/peloton.svg';
+  static const String iconsPeppapig = 'assets/icons/peppapig.svg';
+  static const String iconsWarehouse = 'assets/icons/warehouse.svg';
+  static const String iconsWattpad = 'assets/icons/wattpad.svg';
   static const String imagesAppLogo = 'assets/images/app_logo.png';
   static const String imagesAppLogos = 'assets/images/appLogos.png';
+  static const String imagesBook1 = 'assets/images/book1.png';
+  static const String imagesBook2 = 'assets/images/book2.png';
+  static const String imagesBook3 = 'assets/images/book3.png';
   static const String imagesLogoSplash = 'assets/images/logo_splash.png';
   static const String imagesSpalshLogo = 'assets/images/spalsh_logo.png';
 }

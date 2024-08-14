@@ -23,10 +23,10 @@ class LoginCubit extends Cubit<LoginState> {
       password: passwordController.text,
     );
     response.when(success: (loginResponse) async {
-      await saveUserUid(loginResponse.user!.uid ?? '');
+      await saveUserUid(loginResponse.user!.uid);
       emit(LoginState.success(loginResponse));
     }, failure: (error) {
-      emit(LoginState.error(error: error.toString() ?? ''));
+      emit(LoginState.error(error: error.toString()));
     });
   }
 
@@ -34,10 +34,10 @@ class LoginCubit extends Cubit<LoginState> {
     emit(const LoginState.googleSignInLoading());
     final response = await _repository.signInWithGoogle(context);
     response.when(success: (googleSignIn) async {
-      await saveUserUid(googleSignIn!.uid ?? '');
+      await saveUserUid(googleSignIn!.uid);
       emit(const LoginState.googleSignInSuccess());
     }, failure: (error) {
-      emit(LoginState.googleSignInError(error: error.toString() ?? ''));
+      emit(LoginState.googleSignInError(error: error.toString()));
     });
   }
 
@@ -47,7 +47,7 @@ class LoginCubit extends Cubit<LoginState> {
     response.when(success: (googleSignIn) async {
       emit(const LoginState.resetPasswordSuccess());
     }, failure: (error) {
-      emit(LoginState.resetPasswordError(error: error.toString() ?? ''));
+      emit(LoginState.resetPasswordError(error: error.toString()));
     });
   }
 

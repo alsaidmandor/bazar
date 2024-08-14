@@ -55,7 +55,7 @@ class AuthenticationRepository {
   }
 
   // Google Sign-In
-  Future<FirebaseResult<User?>> signInWithGoogle(BuildContext context) async {
+  Future<FirebaseResult<User?>> signInWithGoogle( context) async {
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
       final GoogleSignInAuthentication? googleAuth =

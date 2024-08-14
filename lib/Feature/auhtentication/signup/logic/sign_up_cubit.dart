@@ -23,10 +23,10 @@ class SignupCubit extends Cubit<SignupState> {
     final response = await _authRepository.createUserWithEmailAndPassword(
         email: emailController.text, password: passwordController.text);
     response.when(success: (signupResponse) async {
-      await saveUserUid(signupResponse.user!.uid ?? '');
+      await saveUserUid(signupResponse.user!.uid);
       emit(SignupState.signupSuccess(signupResponse));
     }, failure: (error) {
-      emit(SignupState.signupError(error: error ?? ''));
+      emit(SignupState.signupError(error: error));
     });
   }
 
