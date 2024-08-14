@@ -12,8 +12,8 @@ import '../best_vendors_list/best_vendors_list_view.dart';
 import '../best_vendors_list/best_vendors_shimmer_loading.dart';
 import '../carouel_slide_shimmer_loading.dart';
 import '../carousel_slider_widget.dart';
-import '../top_of_week_see_all.dart';
-import '../top_of_week_see_all_shimmer_loading.dart';
+import '../see_all_widget.dart';
+import '../see_all_shimmer_loading.dart';
 
 class TopOfWeekBlocBuilder extends StatelessWidget {
   const TopOfWeekBlocBuilder({Key? key}) : super(key: key);
@@ -47,11 +47,11 @@ class TopOfWeekBlocBuilder extends StatelessWidget {
       children: [
         const CarouelSlideShimmerLoading(),
         verticalSpace(13),
-        const TopOfWeekSeeAllShimmerLoading(),
+        const SeeAllShimmerLoading(),
         verticalSpace(16),
         const TopOfWeekShimmerLoading(),
         verticalSpace(16),
-        const TopOfWeekSeeAllShimmerLoading(),
+        const SeeAllShimmerLoading(),
         verticalSpace(16),
         const BestVendorsShimmerLoading(),
         verticalSpace(16),
@@ -65,7 +65,7 @@ class TopOfWeekBlocBuilder extends StatelessWidget {
       children: [
         CarouselSliderWidget(image: images),
         verticalSpace(13),
-        TopOfWeekSeeAll(
+        SeeAllWidget(
           title: 'Top of Week',
           onPress: () {
             debugPrint('See All');
@@ -76,7 +76,7 @@ class TopOfWeekBlocBuilder extends StatelessWidget {
           bookModel: books,
         ),
         verticalSpace(16),
-        TopOfWeekSeeAll(
+        SeeAllWidget(
           title: 'Best Vendors',
           onPress: () {
             debugPrint('See All');
@@ -85,7 +85,7 @@ class TopOfWeekBlocBuilder extends StatelessWidget {
         verticalSpace(16),
         const BestVendorsListView(),
         verticalSpace(16),
-        TopOfWeekSeeAll(
+        SeeAllWidget(
           title: 'Authors',
           onPress: () {
             debugPrint('See All');

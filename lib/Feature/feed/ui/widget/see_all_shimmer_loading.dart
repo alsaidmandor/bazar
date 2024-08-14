@@ -4,8 +4,8 @@ import 'package:shimmer/shimmer.dart';
 
 import '../../../../core/theme/colors.dart';
 
-class TopOfWeekSeeAllShimmerLoading extends StatelessWidget {
-  const TopOfWeekSeeAllShimmerLoading({super.key});
+class SeeAllShimmerLoading extends StatelessWidget {
+  const SeeAllShimmerLoading({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import '../../../../core/theme/colors.dart';
 import '../../../../core/theme/styles.dart';
 
-class TopOfWeekSeeAll extends StatelessWidget {
+class SeeAllWidget extends StatelessWidget {
   final String title;
   final VoidCallback onPress;
 
-  const TopOfWeekSeeAll(
-      {super.key, required this.title, required this.onPress});
+  const SeeAllWidget({super.key, required this.title, required this.onPress});
 
   @override
   Widget build(BuildContext context) {
