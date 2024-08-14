@@ -147,14 +147,14 @@ class TextStyles {
   static TextStyle fontBody14BlackRegular = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
-    color: AppColor.greyScale400,
+    color: AppColor.greyScale900,
   );
 
   // Roboto (Medium)
   static TextStyle fontBody14BlackMedium = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.medium,
-    color: AppColor.greyScale400,
+    color: AppColor.greyScale900,
   );
 
   // Roboto (SemiBold)

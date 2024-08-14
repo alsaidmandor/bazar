@@ -67,6 +67,22 @@ dependencies:
   shared_preferences: ^2.3.1
   # provides API to store data in secure storage.
   flutter_secure_storage: ^9.2.2
+#  shimmer loading
+  shimmer: ^3.0.0
+#  A carousel slider widget, support infinite scroll and custom child widget
+  carousel_slider: ^5.0.0
+#  Dots indicator to show progression of a PageView for example
+  dots_indicator: ^3.0.0
+  # Networking
+  dio: ^5.5.0+1
+  retrofit: ^4.2.0
+  retrofit_generator: ^8.2.0
+  pretty_dio_logger: ^1.4.0
+  # Automatically generate code for converting to and from JSON by annotating Dart classes
+  json_serializable: ^6.8.0
+  json_annotation: ^4.9.0
+  # Flutter library to load and cache network images.
+  cached_network_image: ^3.3.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
