@@ -41,7 +41,7 @@ class FeedCubit extends Cubit<FeedState> {
   bool isSuccess = false;
   Future<void> getBooksDetails({required String id}) async {
     emit(const FeedState.booksDetailsLoading());
-    final response = await _feedRepo.getBooksDetails(id: 'Phv1EAAAQBAJ');
+    final response = await _feedRepo.getBooksDetails(id: id);
     response.when(
       success: (data) {
         emit(FeedState.booksDetailsSuccess(data));

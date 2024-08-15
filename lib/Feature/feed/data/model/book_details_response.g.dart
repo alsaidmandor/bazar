@@ -42,6 +42,7 @@ VolumeInfo _$VolumeInfoFromJson(Map<String, dynamic> json) => VolumeInfo(
           (json['authors'] as List<dynamic>?)?.map((e) => e as String).toList(),
       publisher: json['publisher'] as String?,
       publishedDate: json['publishedDate'] as String?,
+      description: json['description'] as String?,
       industryIdentifiers: (json['industryIdentifiers'] as List<dynamic>?)
           ?.map((e) => IndustryIdentifier.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -80,6 +81,7 @@ Map<String, dynamic> _$VolumeInfoToJson(VolumeInfo instance) =>
       'authors': instance.authors,
       'publisher': instance.publisher,
       'publishedDate': instance.publishedDate,
+      'description': instance.description,
       'industryIdentifiers': instance.industryIdentifiers,
       'readingModes': instance.readingModes,
       'pageCount': instance.pageCount,
@@ -162,18 +164,87 @@ Map<String, dynamic> _$ImageLinksToJson(ImageLinks instance) =>
       'extraLarge': instance.extraLarge,
     };
 
+LayerInfo _$LayerInfoFromJson(Map<String, dynamic> json) => LayerInfo(
+      layers: (json['layers'] as List<dynamic>?)
+          ?.map((e) => Layer.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$LayerInfoToJson(LayerInfo instance) => <String, dynamic>{
+      'layers': instance.layers,
+    };
+
+Layer _$LayerFromJson(Map<String, dynamic> json) => Layer(
+      layerId: json['layerId'] as String?,
+      volumeAnnotationsVersion: json['volumeAnnotationsVersion'] as String?,
+    );
+
+Map<String, dynamic> _$LayerToJson(Layer instance) => <String, dynamic>{
+      'layerId': instance.layerId,
+      'volumeAnnotationsVersion': instance.volumeAnnotationsVersion,
+    };
+
 SaleInfo _$SaleInfoFromJson(Map<String, dynamic> json) => SaleInfo(
       country: json['country'] as String?,
       saleability: json['saleability'] as String?,
       isEbook: json['isEbook'] as bool?,
+      listPrice: json['listPrice'] == null
+          ? null
+          : ListPrice.fromJson(json['listPrice'] as Map<String, dynamic>),
+      retailPrice: json['retailPrice'] == null
+          ? null
+          : RetailPrice.fromJson(json['retailPrice'] as Map<String, dynamic>),
       buyLink: json['buyLink'] as String?,
+      offers: (json['offers'] as List<dynamic>?)
+          ?.map((e) => Offer.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$SaleInfoToJson(SaleInfo instance) => <String, dynamic>{
       'country': instance.country,
       'saleability': instance.saleability,
       'isEbook': instance.isEbook,
+      'listPrice': instance.listPrice,
+      'retailPrice': instance.retailPrice,
       'buyLink': instance.buyLink,
+      'offers': instance.offers,
+    };
+
+ListPrice _$ListPriceFromJson(Map<String, dynamic> json) => ListPrice(
+      amount: (json['amount'] as num?)?.toDouble(),
+      currencyCode: json['currencyCode'] as String?,
+    );
+
+Map<String, dynamic> _$ListPriceToJson(ListPrice instance) => <String, dynamic>{
+      'amount': instance.amount,
+      'currencyCode': instance.currencyCode,
+    };
+
+RetailPrice _$RetailPriceFromJson(Map<String, dynamic> json) => RetailPrice(
+      amount: (json['amount'] as num?)?.toDouble(),
+      currencyCode: json['currencyCode'] as String?,
+    );
+
+Map<String, dynamic> _$RetailPriceToJson(RetailPrice instance) =>
+    <String, dynamic>{
+      'amount': instance.amount,
+      'currencyCode': instance.currencyCode,
+    };
+
+Offer _$OfferFromJson(Map<String, dynamic> json) => Offer(
+      finskyOfferType: (json['finskyOfferType'] as num?)?.toInt(),
+      listPrice: json['listPrice'] == null
+          ? null
+          : ListPrice.fromJson(json['listPrice'] as Map<String, dynamic>),
+      retailPrice: json['retailPrice'] == null
+          ? null
+          : RetailPrice.fromJson(json['retailPrice'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$OfferToJson(Offer instance) => <String, dynamic>{
+      'finskyOfferType': instance.finskyOfferType,
+      'listPrice': instance.listPrice,
+      'retailPrice': instance.retailPrice,
     };
 
 AccessInfo _$AccessInfoFromJson(Map<String, dynamic> json) => AccessInfo(
@@ -209,20 +280,18 @@ Map<String, dynamic> _$AccessInfoToJson(AccessInfo instance) =>
 
 Epub _$EpubFromJson(Map<String, dynamic> json) => Epub(
       isAvailable: json['isAvailable'] as bool?,
-      downloadLink: json['downloadLink'] as String?,
+      acsTokenLink: json['acsTokenLink'] as String?,
     );
 
 Map<String, dynamic> _$EpubToJson(Epub instance) => <String, dynamic>{
       'isAvailable': instance.isAvailable,
-      'downloadLink': instance.downloadLink,
+      'acsTokenLink': instance.acsTokenLink,
     };
 
 Pdf _$PdfFromJson(Map<String, dynamic> json) => Pdf(
       isAvailable: json['isAvailable'] as bool?,
-      downloadLink: json['downloadLink'] as String?,
     );
 
 Map<String, dynamic> _$PdfToJson(Pdf instance) => <String, dynamic>{
       'isAvailable': instance.isAvailable,
-      'downloadLink': instance.downloadLink,
     };

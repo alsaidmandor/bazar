@@ -18,7 +18,6 @@ class TopOfWeekListViewItem extends StatelessWidget {
       required this.price,
       required this.countryCode});
 
-  @override
   Widget build(BuildContext context) {
     return Container(
       height: 165.h,
@@ -65,7 +64,7 @@ class TopOfWeekListViewItem extends StatelessWidget {
                   .copyWith(height: 1.5, overflow: TextOverflow.ellipsis),
               overflow: TextOverflow.ellipsis),
           Text(
-            '$countryCode $price ',
+            '${countryCode} ${price} ',
             style: TextStyles.fontBody12BlackBold
                 .copyWith(color: AppColor.primary500, height: 1.5),
             overflow: TextOverflow.ellipsis,

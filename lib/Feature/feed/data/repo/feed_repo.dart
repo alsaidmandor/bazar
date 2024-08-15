@@ -11,7 +11,7 @@ class FeedRepo {
 
   Future<ApiResult<BooksModel>> getBooks() async {
     try {
-      final response = await _feedApiService.getBooks("Fiction", 5);
+      final response = await _feedApiService.getBooks("amine", 30);
       // print('show me success data response of book : $response');
       return ApiResult.success(response);
     } catch (error) {
