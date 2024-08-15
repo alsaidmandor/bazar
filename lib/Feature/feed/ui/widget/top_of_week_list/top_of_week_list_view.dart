@@ -5,7 +5,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/helper/spacing.dart';
+import '../../../../../core/theme/colors.dart';
 import '../../../data/model/books_model.dart';
+import '../book_details/book_details_bloc_builder.dart';
 
 class TopOfWeekListView extends StatefulWidget {
   final BooksModel bookModel;
@@ -15,7 +17,23 @@ class TopOfWeekListView extends StatefulWidget {
   _TopOfWeekListViewState createState() => _TopOfWeekListViewState();
 }
 
-class _TopOfWeekListViewState extends State<TopOfWeekListView> {
+class _TopOfWeekListViewState extends State<TopOfWeekListView>
+    with TickerProviderStateMixin {
+  late AnimationController controller;
+
+  @override
+  initState() {
+    super.initState();
+    controller = BottomSheet.createAnimationController(this);
+    controller.duration = const Duration(seconds: 3);
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
   var selectedBookIndex = 0;
 
   @override
@@ -32,9 +50,11 @@ class _TopOfWeekListViewState extends State<TopOfWeekListView> {
               setState(() {
                 selectedBookIndex = index;
               });
+              debugPrint('print Id of book : ${item.id!}');
               context.read<FeedCubit>().getBooksDetails(
-                    id: widget.bookModel.items![index].id!,
+                    id: item.id!,
                   );
+              _showFullScreenModal(context);
             },
             child: TopOfWeekListViewItem(
               imageUri: item.volumeInfo!.imageLinks!.smallThumbnail!,
@@ -48,6 +68,35 @@ class _TopOfWeekListViewState extends State<TopOfWeekListView> {
           return horizontalSpace(10);
         },
       ),
+    );
+  }
+
+  void _showFullScreenModal(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      transitionAnimationController: controller,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(25),
+      ),
+      useSafeArea: true,
+      builder: (BuildContext context) {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              height: 5.h,
+              width: 50.w,
+              margin: EdgeInsets.only(top: 20.h),
+              decoration: BoxDecoration(
+                color: AppColor.greyScale200,
+                borderRadius: BorderRadius.circular(5),
+              ),
+            ),
+            const BookDetailsBlocBuilder(),
+          ],
+        );
+      },
     );
   }
 }

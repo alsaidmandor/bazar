@@ -83,6 +83,9 @@ dependencies:
   json_annotation: ^4.9.0
   # Flutter library to load and cache network images.
   cached_network_image: ^3.3.1
+#  A simple yet fully customizable ratingbar for flutter
+  flutter_rating_bar: ^4.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

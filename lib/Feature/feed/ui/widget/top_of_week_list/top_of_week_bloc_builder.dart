@@ -12,8 +12,8 @@ import '../best_vendors_list/best_vendors_list_view.dart';
 import '../best_vendors_list/best_vendors_shimmer_loading.dart';
 import '../carouel_slide_shimmer_loading.dart';
 import '../carousel_slider_widget.dart';
-import '../see_all_widget.dart';
 import '../see_all_shimmer_loading.dart';
+import '../see_all_widget.dart';
 
 class TopOfWeekBlocBuilder extends StatelessWidget {
   const TopOfWeekBlocBuilder({Key? key}) : super(key: key);
@@ -41,7 +41,6 @@ class TopOfWeekBlocBuilder extends StatelessWidget {
     );
   }
 
-  /// shimmer loading for specializations and doctors
   Widget setupLoading() {
     return Column(
       children: [

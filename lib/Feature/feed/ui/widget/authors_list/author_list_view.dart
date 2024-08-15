@@ -27,6 +27,7 @@ class _AuthorListViewState extends State<AuthorListView> {
                 setState(() {
                   selectedAuthorIndex = index;
                 });
+                debugPrint('print Id of book : ');
               },
               child: const AuthorItem());
         },
