@@ -1,10 +1,12 @@
 import 'package:bazaar/Feature/feed/logic/feed_cubit.dart';
 import 'package:bazaar/Feature/feed/ui/widget/top_of_week_list/top_of_week_list_view.dart';
 import 'package:bazaar/Feature/feed/ui/widget/top_of_week_list/top_of_week_shimmer_loading.dart';
+import 'package:bazaar/core/helper/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/helper/spacing.dart';
+import '../../../../../core/routing/routes.dart';
 import '../../feed_screen.dart';
 import '../authors_list/author_list_view.dart';
 import '../authors_list/author_shimmer_loading.dart';
@@ -31,7 +33,7 @@ class TopOfWeekBlocBuilder extends StatelessWidget {
               return setupLoading();
             },
             booksTopWeekSuccess: (response) {
-              return setupSuccess(response);
+              return setupSuccess(response , context);
             },
             booksTopWeekError: (errorHandler) => setupError(),
             orElse: () {
@@ -59,7 +61,7 @@ class TopOfWeekBlocBuilder extends StatelessWidget {
     );
   }
 
-  Widget setupSuccess(books) {
+  Widget setupSuccess(books, BuildContext context) {
     return Column(
       children: [
         CarouselSliderWidget(image: images),
@@ -88,6 +90,7 @@ class TopOfWeekBlocBuilder extends StatelessWidget {
           title: 'Authors',
           onPress: () {
             debugPrint('See All');
+            context.pushNamed(Routes.authorsScreen);
           },
         ),
         verticalSpace(16),

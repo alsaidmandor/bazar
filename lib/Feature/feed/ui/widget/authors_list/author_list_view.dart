@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/helper/spacing.dart';
+import '../../../data/model/literary_figure.dart';
 
 class AuthorListView extends StatefulWidget {
   const AuthorListView({super.key});
@@ -29,7 +30,7 @@ class _AuthorListViewState extends State<AuthorListView> {
                 });
                 debugPrint('print Id of book : ');
               },
-              child: const AuthorItem());
+              child: AuthorItem(imagePath: literaryFigures[index].imageUrl,name: literaryFigures[index].name,));
         },
         separatorBuilder: (BuildContext context, int index) {
           return horizontalSpace(10);
