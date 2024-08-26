@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/helper/spacing.dart';
 import '../../../../../core/routing/routes.dart';
+import '../../../data/model/literary_figure.dart';
 import '../../feed_screen.dart';
 import '../authors_list/author_list_view.dart';
 import '../authors_list/author_shimmer_loading.dart';
@@ -94,7 +95,7 @@ class TopOfWeekBlocBuilder extends StatelessWidget {
           },
         ),
         verticalSpace(16),
-        const AuthorListView()
+         AuthorListView(literaryFigures: literaryFigures,scrollDirection: Axis.horizontal,)
       ],
     );
   }

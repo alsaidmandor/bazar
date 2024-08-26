@@ -6,67 +6,67 @@ import 'package:shimmer/shimmer.dart';
 
 import '../../../../../core/theme/colors.dart';
 import '../../../../../core/theme/styles.dart';
+import '../../../data/model/literary_figure.dart';
 
 class AuthorItem extends StatelessWidget {
-  final String imagePath;
-
-  final String name;
-
-  final String? description;
+final LiteraryFigure literaryFigure;
 
   final bool isFeed;
 
   const AuthorItem({
     super.key,
-    required this.imagePath,
-    required this.name,
-    this.description,
+
     this.isFeed = true,
+    required this.literaryFigure,
   });
 
   @override
   Widget build(BuildContext context) {
-    return isFeed ? Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CircleAvatar(
-            radius: 50,
-            backgroundColor: AppColor.greyScale100,
-            child: CachedNetworkImage(
-              imageUrl:
-              imagePath,
-              progressIndicatorBuilder: (context, url, downloadProgress) {
-                return Shimmer.fromColors(
-                  baseColor: AppColor.greyScale100,
-                  highlightColor: Colors.white,
-                  child: const CircleAvatar(
-                    radius: 50,
-                    backgroundColor: Colors.white,
-                  ),
-                );
-              },
-              imageBuilder: (context, imageProvider) =>
-                  CircleAvatar(
-                    radius: 50,
-                    backgroundImage: imageProvider,
-                  ),
+    return isFeed ? SizedBox(
+      width: 80.w,
+      child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CircleAvatar(
+              radius: 30,
+              backgroundColor: AppColor.greyScale100,
+              child: CachedNetworkImage(
+                imageUrl:
+                literaryFigure.imageUrl,
+                progressIndicatorBuilder: (context, url, downloadProgress) {
+                  return Shimmer.fromColors(
+                    baseColor: AppColor.greyScale100,
+                    highlightColor: Colors.white,
+                    child: const CircleAvatar(
+                      radius: 50,
+                      backgroundColor: Colors.white,
+                    ),
+                  );
+                },
+                imageBuilder: (context, imageProvider) =>
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundImage: imageProvider,
+                    ),
+              ),
             ),
-          ),
-          // verticalSpace(20),
-          Text(name,
-              style: TextStyles.fontBody14BlackMedium
-                  .copyWith(height: 1.5, overflow: TextOverflow.ellipsis),
+
+            // verticalSpace(20),
+            Text(literaryFigure.name,
+                style: TextStyles.fontBody14BlackMedium
+                    .copyWith(height: 1.5, overflow: TextOverflow.ellipsis),
+                textAlign: TextAlign.start,
+                overflow: TextOverflow.ellipsis),
+            Text(
+               literaryFigure.title,
+              style: TextStyles.fontBody12BlackBold
+                  .copyWith(color: AppColor.greyScale500, height: 1.5),
+              overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.start,
-              overflow: TextOverflow.ellipsis),
-          Text(
-            description ?? ' writer',
-            style: TextStyles.fontBody12BlackBold
-                .copyWith(color: AppColor.greyScale500, height: 1.5),
-            overflow: TextOverflow.ellipsis,
-            textAlign: TextAlign.start,
-          ),
-        ],
-      ) : SizedBox(
+            ),
+          ],
+        ),
+    ) : SizedBox(
       height: 80.h,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -76,7 +76,7 @@ class AuthorItem extends StatelessWidget {
               backgroundColor: AppColor.greyScale100,
               child: CachedNetworkImage(
                 imageUrl:
-                imagePath,
+                literaryFigure.imageUrl,
                 progressIndicatorBuilder: (context, url, downloadProgress) {
                   return Shimmer.fromColors(
                     baseColor: AppColor.greyScale100,
@@ -102,13 +102,13 @@ class AuthorItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(name,
+                  Text(literaryFigure.name,
                       style: TextStyles.fontBody14BlackMedium
                           .copyWith(height: 1.5, overflow: TextOverflow.ellipsis),
                       textAlign: TextAlign.start,
                       overflow: TextOverflow.ellipsis),
                   Text(
-                    description ?? ' writer',
+                    literaryFigure.description ,
                     style: TextStyles.fontBody12BlackBold
                         .copyWith(color: AppColor.greyScale500, height: 1.5),
                     overflow: TextOverflow.ellipsis,

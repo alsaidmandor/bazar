@@ -2,6 +2,7 @@ import 'package:bazaar/Feature/auhtentication/login/ui/login_screen.dart';
 import 'package:bazaar/Feature/auhtentication/signup/logic/sign_up_cubit.dart';
 import 'package:bazaar/Feature/auhtentication/signup/ui/otp_screen.dart';
 import 'package:bazaar/Feature/auhtentication/signup/ui/sign_up_screen.dart';
+import 'package:bazaar/Feature/feed/ui/widget/authors_list/author_details_screen.dart';
 import 'package:bazaar/Feature/onboarding/onboarding_screen.dart';
 import 'package:bazaar/core/routing/routes.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,7 @@ import '../../Feature/auhtentication/login/logic/cubit/login_cubit.dart';
 import '../../Feature/auhtentication/login/ui/forget_password_screen.dart';
 import '../../Feature/auhtentication/signup/ui/sign_up_phone_screen.dart';
 import '../../Feature/auhtentication/signup/ui/widgets/sign_up_success_verification.dart';
+import '../../Feature/feed/data/model/literary_figure.dart';
 import '../../Feature/feed/ui/authors_screen.dart';
 import '../../Feature/home/logic/home_cubit.dart';
 import '../../Feature/home/ui/home_screen.dart';
@@ -91,7 +93,11 @@ class AppRouter {
         return SlideTopRoute(builder: (BuildContext context) {
           return  const AuthorsScreen();
         });
-
+      case Routes.authorsDetailsScreen:
+        final args = settings.arguments as LiteraryFigure ;
+        return SlideLeftRoute(builder: (BuildContext context) {
+          return AuthorDetailsScreen(literaryFigure: args);
+        });
 
       default:
         return null;
