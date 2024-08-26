@@ -120,7 +120,12 @@ class TextStyles {
     fontWeight: FontWeightHelper.semiBold,
     color: AppColor.greyScale400,
   );
-
+  // Roboto (Bold)
+  static TextStyle fontBody16BlackBold = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColor.greyScale900,
+  );
   // Roboto (Medium)
   static TextStyle fontBody16BlackMedium = TextStyle(
     fontSize: 16.sp,
