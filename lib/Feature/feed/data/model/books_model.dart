@@ -66,6 +66,8 @@ class VolumeInfo {
   ReadingModes? readingModes;
   @JsonKey(name: 'pageCount')
   int? pageCount;
+  @JsonKey(name: 'description')
+  String? description;
   @JsonKey(name: 'printType')
   String? printType;
   @JsonKey(name: 'categories')
@@ -101,6 +103,7 @@ class VolumeInfo {
       this.categories,
       this.maturityRating,
       this.allowAnonLogging,
+        this.description,
       this.contentVersion,
       this.panelizationSummary,
       this.imageLinks,

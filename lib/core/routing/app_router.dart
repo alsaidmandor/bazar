@@ -15,6 +15,7 @@ import '../../Feature/auhtentication/signup/ui/sign_up_phone_screen.dart';
 import '../../Feature/auhtentication/signup/ui/widgets/sign_up_success_verification.dart';
 import '../../Feature/feed/data/model/literary_figure.dart';
 import '../../Feature/feed/ui/authors_screen.dart';
+import '../../Feature/feed/ui/search_books_screen.dart';
 import '../../Feature/home/logic/home_cubit.dart';
 import '../../Feature/home/ui/home_screen.dart';
 import 'custom_route.dart';
@@ -98,7 +99,10 @@ class AppRouter {
         return SlideLeftRoute(builder: (BuildContext context) {
           return AuthorDetailsScreen(literaryFigure: args);
         });
-
+      case Routes.searchBooksScreen:
+        return SlideTopRoute(builder: (BuildContext context) {
+          return  const SearchBooksScreen();
+        });
       default:
         return null;
     }

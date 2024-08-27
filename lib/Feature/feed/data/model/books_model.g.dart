@@ -66,6 +66,7 @@ VolumeInfo _$VolumeInfoFromJson(Map<String, dynamic> json) => VolumeInfo(
           .toList(),
       maturityRating: json['maturityRating'] as String?,
       allowAnonLogging: json['allowAnonLogging'] as bool?,
+      description: json['description'] as String?,
       contentVersion: json['contentVersion'] as String?,
       panelizationSummary: json['panelizationSummary'] == null
           ? null
@@ -89,6 +90,7 @@ Map<String, dynamic> _$VolumeInfoToJson(VolumeInfo instance) =>
       'industryIdentifiers': instance.industryIdentifiers,
       'readingModes': instance.readingModes,
       'pageCount': instance.pageCount,
+      'description': instance.description,
       'printType': instance.printType,
       'categories': instance.categories,
       'maturityRating': instance.maturityRating,

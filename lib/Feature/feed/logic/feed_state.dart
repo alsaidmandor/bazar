@@ -17,4 +17,12 @@ class FeedState with _$FeedState {
       BooksDetailsSuccess;
   const factory FeedState.booksDetailsError(ErrorHandler errorHandler) =
       BooksDetailsError;
+
+//   Get Search Books
+
+  const factory FeedState.searchBooksLoading() = SearchBooksLoading;
+  const factory FeedState.searchBooksSuccess( BooksModel response) =
+  SearchBooksSuccess;
+  const factory FeedState.searchBooksError(ErrorHandler errorHandler) =
+  SearchBooksError;
 }
