@@ -15,6 +15,8 @@ class FeedCubit extends Cubit<FeedState> {
 
   FeedCubit(this._feedRepo) : super(const FeedState.initial());
 
+  TextEditingController searchController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
   Future<void> getBooksTopWeek() async {
     emit(const FeedState.booksTopWeekLoading());
     final response = await _feedRepo.getBooks();
@@ -51,6 +53,21 @@ class FeedCubit extends Cubit<FeedState> {
       failure: (errorHandler) {
         debugPrint('show me failure data of book details : $errorHandler');
         emit(FeedState.booksDetailsError(errorHandler));
+      },
+    );
+  }
+  Future<void> getSearchBooks({required String search}) async {
+    emit(const FeedState.searchBooksLoading());
+    final response = await _feedRepo.searchBooks(search: search);
+    response.when(
+      success: (data) {
+        emit(FeedState.searchBooksSuccess(data));
+        isSuccess = true;
+        debugPrint('show me success data of search book  : $data');
+      },
+      failure: (errorHandler) {
+        debugPrint('show me failure data of search book  : $errorHandler');
+        emit(FeedState.searchBooksError(errorHandler));
       },
     );
   }

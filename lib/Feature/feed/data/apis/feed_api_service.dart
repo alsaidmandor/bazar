@@ -21,4 +21,10 @@ abstract class FeedApiService {
     @Query("q") String query,
     @Query("maxResults") int maxResults,
   );
+
+  @GET(FeedApiConstants.fictionBook)
+  Future<BooksModel> searchBooks(
+      @Query("q") String query,
+      @Query("maxResults") int maxResults,
+      );
 }

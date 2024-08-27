@@ -20,6 +20,7 @@ class AppTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final Function(String?) validator;
   final Function(String?)? onSaved;
+  final Function(String?)? onChange;
 
   final List<String>? autoFillHint;
 
@@ -46,7 +47,7 @@ class AppTextFormField extends StatelessWidget {
     this.onEditingComplete,
     this.prefixIcon,
     this.radius = 16,
-    this.textInputType,
+    this.textInputType, this.onChange,
   });
 
   @override
@@ -108,6 +109,9 @@ class AppTextFormField extends StatelessWidget {
       },
       onSaved: (value) {
         onSaved!(value);
+      },
+      onChanged: (value) {
+        onChange!(value);
       },
     );
   }

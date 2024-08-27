@@ -1,10 +1,12 @@
 import 'package:bazaar/Feature/feed/ui/widget/top_of_week_list/top_of_week_bloc_builder.dart';
+import 'package:bazaar/core/helper/extensions.dart';
 import 'package:bazaar/core/theme/icon_broken.dart';
 import 'package:bazaar/generated/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../core/routing/routes.dart';
 import '../../../core/theme/colors.dart';
 import '../../../core/theme/styles.dart';
 
@@ -25,7 +27,9 @@ class FeedScreen extends StatelessWidget {
           leading: IconButton(
               padding: EdgeInsets.only(left: 20.w),
               // Adjust padding as needed
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routes.searchBooksScreen);
+              },
               icon: const Icon(
                 IconBroken.Search,
                 color: AppColor.greyScale900,

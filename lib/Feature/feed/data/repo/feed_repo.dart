@@ -19,10 +19,18 @@ class FeedRepo {
     }
   }
 
-  Future<ApiResult<BookDetailsResponse>> getBooksDetails(
-      {required String id}) async {
+  Future<ApiResult<BookDetailsResponse>> getBooksDetails({required String id}) async {
     try {
       final response = await _feedApiService.getBookById(id);
+      return ApiResult.success(response);
+    } catch (error) {
+      return ApiResult.failure(ErrorHandler.handle(error));
+    }
+  }
+
+  Future<ApiResult<BooksModel>> searchBooks({required String search}) async {
+    try {
+      final response = await _feedApiService.searchBooks(search, 38);
       return ApiResult.success(response);
     } catch (error) {
       return ApiResult.failure(ErrorHandler.handle(error));

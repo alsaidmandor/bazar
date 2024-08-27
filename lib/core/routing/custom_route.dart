@@ -41,7 +41,7 @@ class SlideTopRoute<T> extends MaterialPageRoute<T> {
         begin: const Offset(0.0, 1.0),
         end: Offset.zero,
       ).animate(
-          CurvedAnimation(parent: animation, curve: Curves.fastOutSlowIn)),
+          CurvedAnimation(parent: animation, curve: Curves.easeInOut)),
       child: child,
     );
   }

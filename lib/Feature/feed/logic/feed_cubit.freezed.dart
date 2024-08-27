@@ -25,6 +25,9 @@ mixin _$FeedState {
     required TResult Function() booksDetailsLoading,
     required TResult Function(BookDetailsResponse response) booksDetailsSuccess,
     required TResult Function(ErrorHandler errorHandler) booksDetailsError,
+    required TResult Function() searchBooksLoading,
+    required TResult Function(BooksModel response) searchBooksSuccess,
+    required TResult Function(ErrorHandler errorHandler) searchBooksError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +39,9 @@ mixin _$FeedState {
     TResult? Function()? booksDetailsLoading,
     TResult? Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult? Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult? Function()? searchBooksLoading,
+    TResult? Function(BooksModel response)? searchBooksSuccess,
+    TResult? Function(ErrorHandler errorHandler)? searchBooksError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +53,9 @@ mixin _$FeedState {
     TResult Function()? booksDetailsLoading,
     TResult Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult Function()? searchBooksLoading,
+    TResult Function(BooksModel response)? searchBooksSuccess,
+    TResult Function(ErrorHandler errorHandler)? searchBooksError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,6 +68,9 @@ mixin _$FeedState {
     required TResult Function(BooksDetailsLoading value) booksDetailsLoading,
     required TResult Function(BooksDetailsSuccess value) booksDetailsSuccess,
     required TResult Function(BooksDetailsError value) booksDetailsError,
+    required TResult Function(SearchBooksLoading value) searchBooksLoading,
+    required TResult Function(SearchBooksSuccess value) searchBooksSuccess,
+    required TResult Function(SearchBooksError value) searchBooksError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +82,9 @@ mixin _$FeedState {
     TResult? Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult? Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult? Function(BooksDetailsError value)? booksDetailsError,
+    TResult? Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult? Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult? Function(SearchBooksError value)? searchBooksError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +96,9 @@ mixin _$FeedState {
     TResult Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult Function(BooksDetailsError value)? booksDetailsError,
+    TResult Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult Function(SearchBooksError value)? searchBooksError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -154,6 +172,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() booksDetailsLoading,
     required TResult Function(BookDetailsResponse response) booksDetailsSuccess,
     required TResult Function(ErrorHandler errorHandler) booksDetailsError,
+    required TResult Function() searchBooksLoading,
+    required TResult Function(BooksModel response) searchBooksSuccess,
+    required TResult Function(ErrorHandler errorHandler) searchBooksError,
   }) {
     return initial();
   }
@@ -168,6 +189,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? booksDetailsLoading,
     TResult? Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult? Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult? Function()? searchBooksLoading,
+    TResult? Function(BooksModel response)? searchBooksSuccess,
+    TResult? Function(ErrorHandler errorHandler)? searchBooksError,
   }) {
     return initial?.call();
   }
@@ -182,6 +206,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? booksDetailsLoading,
     TResult Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult Function()? searchBooksLoading,
+    TResult Function(BooksModel response)? searchBooksSuccess,
+    TResult Function(ErrorHandler errorHandler)? searchBooksError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -200,6 +227,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(BooksDetailsLoading value) booksDetailsLoading,
     required TResult Function(BooksDetailsSuccess value) booksDetailsSuccess,
     required TResult Function(BooksDetailsError value) booksDetailsError,
+    required TResult Function(SearchBooksLoading value) searchBooksLoading,
+    required TResult Function(SearchBooksSuccess value) searchBooksSuccess,
+    required TResult Function(SearchBooksError value) searchBooksError,
   }) {
     return initial(this);
   }
@@ -214,6 +244,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult? Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult? Function(BooksDetailsError value)? booksDetailsError,
+    TResult? Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult? Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult? Function(SearchBooksError value)? searchBooksError,
   }) {
     return initial?.call(this);
   }
@@ -228,6 +261,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult Function(BooksDetailsError value)? booksDetailsError,
+    TResult Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult Function(SearchBooksError value)? searchBooksError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -290,6 +326,9 @@ class _$BooksTopWeekLoadingImpl implements BooksTopWeekLoading {
     required TResult Function() booksDetailsLoading,
     required TResult Function(BookDetailsResponse response) booksDetailsSuccess,
     required TResult Function(ErrorHandler errorHandler) booksDetailsError,
+    required TResult Function() searchBooksLoading,
+    required TResult Function(BooksModel response) searchBooksSuccess,
+    required TResult Function(ErrorHandler errorHandler) searchBooksError,
   }) {
     return booksTopWeekLoading();
   }
@@ -304,6 +343,9 @@ class _$BooksTopWeekLoadingImpl implements BooksTopWeekLoading {
     TResult? Function()? booksDetailsLoading,
     TResult? Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult? Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult? Function()? searchBooksLoading,
+    TResult? Function(BooksModel response)? searchBooksSuccess,
+    TResult? Function(ErrorHandler errorHandler)? searchBooksError,
   }) {
     return booksTopWeekLoading?.call();
   }
@@ -318,6 +360,9 @@ class _$BooksTopWeekLoadingImpl implements BooksTopWeekLoading {
     TResult Function()? booksDetailsLoading,
     TResult Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult Function()? searchBooksLoading,
+    TResult Function(BooksModel response)? searchBooksSuccess,
+    TResult Function(ErrorHandler errorHandler)? searchBooksError,
     required TResult orElse(),
   }) {
     if (booksTopWeekLoading != null) {
@@ -336,6 +381,9 @@ class _$BooksTopWeekLoadingImpl implements BooksTopWeekLoading {
     required TResult Function(BooksDetailsLoading value) booksDetailsLoading,
     required TResult Function(BooksDetailsSuccess value) booksDetailsSuccess,
     required TResult Function(BooksDetailsError value) booksDetailsError,
+    required TResult Function(SearchBooksLoading value) searchBooksLoading,
+    required TResult Function(SearchBooksSuccess value) searchBooksSuccess,
+    required TResult Function(SearchBooksError value) searchBooksError,
   }) {
     return booksTopWeekLoading(this);
   }
@@ -350,6 +398,9 @@ class _$BooksTopWeekLoadingImpl implements BooksTopWeekLoading {
     TResult? Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult? Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult? Function(BooksDetailsError value)? booksDetailsError,
+    TResult? Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult? Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult? Function(SearchBooksError value)? searchBooksError,
   }) {
     return booksTopWeekLoading?.call(this);
   }
@@ -364,6 +415,9 @@ class _$BooksTopWeekLoadingImpl implements BooksTopWeekLoading {
     TResult Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult Function(BooksDetailsError value)? booksDetailsError,
+    TResult Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult Function(SearchBooksError value)? searchBooksError,
     required TResult orElse(),
   }) {
     if (booksTopWeekLoading != null) {
@@ -454,6 +508,9 @@ class _$BooksTopWeekSuccessImpl implements BooksTopWeekSuccess {
     required TResult Function() booksDetailsLoading,
     required TResult Function(BookDetailsResponse response) booksDetailsSuccess,
     required TResult Function(ErrorHandler errorHandler) booksDetailsError,
+    required TResult Function() searchBooksLoading,
+    required TResult Function(BooksModel response) searchBooksSuccess,
+    required TResult Function(ErrorHandler errorHandler) searchBooksError,
   }) {
     return booksTopWeekSuccess(response);
   }
@@ -468,6 +525,9 @@ class _$BooksTopWeekSuccessImpl implements BooksTopWeekSuccess {
     TResult? Function()? booksDetailsLoading,
     TResult? Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult? Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult? Function()? searchBooksLoading,
+    TResult? Function(BooksModel response)? searchBooksSuccess,
+    TResult? Function(ErrorHandler errorHandler)? searchBooksError,
   }) {
     return booksTopWeekSuccess?.call(response);
   }
@@ -482,6 +542,9 @@ class _$BooksTopWeekSuccessImpl implements BooksTopWeekSuccess {
     TResult Function()? booksDetailsLoading,
     TResult Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult Function()? searchBooksLoading,
+    TResult Function(BooksModel response)? searchBooksSuccess,
+    TResult Function(ErrorHandler errorHandler)? searchBooksError,
     required TResult orElse(),
   }) {
     if (booksTopWeekSuccess != null) {
@@ -500,6 +563,9 @@ class _$BooksTopWeekSuccessImpl implements BooksTopWeekSuccess {
     required TResult Function(BooksDetailsLoading value) booksDetailsLoading,
     required TResult Function(BooksDetailsSuccess value) booksDetailsSuccess,
     required TResult Function(BooksDetailsError value) booksDetailsError,
+    required TResult Function(SearchBooksLoading value) searchBooksLoading,
+    required TResult Function(SearchBooksSuccess value) searchBooksSuccess,
+    required TResult Function(SearchBooksError value) searchBooksError,
   }) {
     return booksTopWeekSuccess(this);
   }
@@ -514,6 +580,9 @@ class _$BooksTopWeekSuccessImpl implements BooksTopWeekSuccess {
     TResult? Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult? Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult? Function(BooksDetailsError value)? booksDetailsError,
+    TResult? Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult? Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult? Function(SearchBooksError value)? searchBooksError,
   }) {
     return booksTopWeekSuccess?.call(this);
   }
@@ -528,6 +597,9 @@ class _$BooksTopWeekSuccessImpl implements BooksTopWeekSuccess {
     TResult Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult Function(BooksDetailsError value)? booksDetailsError,
+    TResult Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult Function(SearchBooksError value)? searchBooksError,
     required TResult orElse(),
   }) {
     if (booksTopWeekSuccess != null) {
@@ -627,6 +699,9 @@ class _$BooksTopWeekErrorImpl implements BooksTopWeekError {
     required TResult Function() booksDetailsLoading,
     required TResult Function(BookDetailsResponse response) booksDetailsSuccess,
     required TResult Function(ErrorHandler errorHandler) booksDetailsError,
+    required TResult Function() searchBooksLoading,
+    required TResult Function(BooksModel response) searchBooksSuccess,
+    required TResult Function(ErrorHandler errorHandler) searchBooksError,
   }) {
     return booksTopWeekError(errorHandler);
   }
@@ -641,6 +716,9 @@ class _$BooksTopWeekErrorImpl implements BooksTopWeekError {
     TResult? Function()? booksDetailsLoading,
     TResult? Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult? Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult? Function()? searchBooksLoading,
+    TResult? Function(BooksModel response)? searchBooksSuccess,
+    TResult? Function(ErrorHandler errorHandler)? searchBooksError,
   }) {
     return booksTopWeekError?.call(errorHandler);
   }
@@ -655,6 +733,9 @@ class _$BooksTopWeekErrorImpl implements BooksTopWeekError {
     TResult Function()? booksDetailsLoading,
     TResult Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult Function()? searchBooksLoading,
+    TResult Function(BooksModel response)? searchBooksSuccess,
+    TResult Function(ErrorHandler errorHandler)? searchBooksError,
     required TResult orElse(),
   }) {
     if (booksTopWeekError != null) {
@@ -673,6 +754,9 @@ class _$BooksTopWeekErrorImpl implements BooksTopWeekError {
     required TResult Function(BooksDetailsLoading value) booksDetailsLoading,
     required TResult Function(BooksDetailsSuccess value) booksDetailsSuccess,
     required TResult Function(BooksDetailsError value) booksDetailsError,
+    required TResult Function(SearchBooksLoading value) searchBooksLoading,
+    required TResult Function(SearchBooksSuccess value) searchBooksSuccess,
+    required TResult Function(SearchBooksError value) searchBooksError,
   }) {
     return booksTopWeekError(this);
   }
@@ -687,6 +771,9 @@ class _$BooksTopWeekErrorImpl implements BooksTopWeekError {
     TResult? Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult? Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult? Function(BooksDetailsError value)? booksDetailsError,
+    TResult? Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult? Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult? Function(SearchBooksError value)? searchBooksError,
   }) {
     return booksTopWeekError?.call(this);
   }
@@ -701,6 +788,9 @@ class _$BooksTopWeekErrorImpl implements BooksTopWeekError {
     TResult Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult Function(BooksDetailsError value)? booksDetailsError,
+    TResult Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult Function(SearchBooksError value)? searchBooksError,
     required TResult orElse(),
   }) {
     if (booksTopWeekError != null) {
@@ -772,6 +862,9 @@ class _$BooksDetailsLoadingImpl implements BooksDetailsLoading {
     required TResult Function() booksDetailsLoading,
     required TResult Function(BookDetailsResponse response) booksDetailsSuccess,
     required TResult Function(ErrorHandler errorHandler) booksDetailsError,
+    required TResult Function() searchBooksLoading,
+    required TResult Function(BooksModel response) searchBooksSuccess,
+    required TResult Function(ErrorHandler errorHandler) searchBooksError,
   }) {
     return booksDetailsLoading();
   }
@@ -786,6 +879,9 @@ class _$BooksDetailsLoadingImpl implements BooksDetailsLoading {
     TResult? Function()? booksDetailsLoading,
     TResult? Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult? Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult? Function()? searchBooksLoading,
+    TResult? Function(BooksModel response)? searchBooksSuccess,
+    TResult? Function(ErrorHandler errorHandler)? searchBooksError,
   }) {
     return booksDetailsLoading?.call();
   }
@@ -800,6 +896,9 @@ class _$BooksDetailsLoadingImpl implements BooksDetailsLoading {
     TResult Function()? booksDetailsLoading,
     TResult Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult Function()? searchBooksLoading,
+    TResult Function(BooksModel response)? searchBooksSuccess,
+    TResult Function(ErrorHandler errorHandler)? searchBooksError,
     required TResult orElse(),
   }) {
     if (booksDetailsLoading != null) {
@@ -818,6 +917,9 @@ class _$BooksDetailsLoadingImpl implements BooksDetailsLoading {
     required TResult Function(BooksDetailsLoading value) booksDetailsLoading,
     required TResult Function(BooksDetailsSuccess value) booksDetailsSuccess,
     required TResult Function(BooksDetailsError value) booksDetailsError,
+    required TResult Function(SearchBooksLoading value) searchBooksLoading,
+    required TResult Function(SearchBooksSuccess value) searchBooksSuccess,
+    required TResult Function(SearchBooksError value) searchBooksError,
   }) {
     return booksDetailsLoading(this);
   }
@@ -832,6 +934,9 @@ class _$BooksDetailsLoadingImpl implements BooksDetailsLoading {
     TResult? Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult? Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult? Function(BooksDetailsError value)? booksDetailsError,
+    TResult? Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult? Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult? Function(SearchBooksError value)? searchBooksError,
   }) {
     return booksDetailsLoading?.call(this);
   }
@@ -846,6 +951,9 @@ class _$BooksDetailsLoadingImpl implements BooksDetailsLoading {
     TResult Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult Function(BooksDetailsError value)? booksDetailsError,
+    TResult Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult Function(SearchBooksError value)? searchBooksError,
     required TResult orElse(),
   }) {
     if (booksDetailsLoading != null) {
@@ -936,6 +1044,9 @@ class _$BooksDetailsSuccessImpl implements BooksDetailsSuccess {
     required TResult Function() booksDetailsLoading,
     required TResult Function(BookDetailsResponse response) booksDetailsSuccess,
     required TResult Function(ErrorHandler errorHandler) booksDetailsError,
+    required TResult Function() searchBooksLoading,
+    required TResult Function(BooksModel response) searchBooksSuccess,
+    required TResult Function(ErrorHandler errorHandler) searchBooksError,
   }) {
     return booksDetailsSuccess(response);
   }
@@ -950,6 +1061,9 @@ class _$BooksDetailsSuccessImpl implements BooksDetailsSuccess {
     TResult? Function()? booksDetailsLoading,
     TResult? Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult? Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult? Function()? searchBooksLoading,
+    TResult? Function(BooksModel response)? searchBooksSuccess,
+    TResult? Function(ErrorHandler errorHandler)? searchBooksError,
   }) {
     return booksDetailsSuccess?.call(response);
   }
@@ -964,6 +1078,9 @@ class _$BooksDetailsSuccessImpl implements BooksDetailsSuccess {
     TResult Function()? booksDetailsLoading,
     TResult Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult Function()? searchBooksLoading,
+    TResult Function(BooksModel response)? searchBooksSuccess,
+    TResult Function(ErrorHandler errorHandler)? searchBooksError,
     required TResult orElse(),
   }) {
     if (booksDetailsSuccess != null) {
@@ -982,6 +1099,9 @@ class _$BooksDetailsSuccessImpl implements BooksDetailsSuccess {
     required TResult Function(BooksDetailsLoading value) booksDetailsLoading,
     required TResult Function(BooksDetailsSuccess value) booksDetailsSuccess,
     required TResult Function(BooksDetailsError value) booksDetailsError,
+    required TResult Function(SearchBooksLoading value) searchBooksLoading,
+    required TResult Function(SearchBooksSuccess value) searchBooksSuccess,
+    required TResult Function(SearchBooksError value) searchBooksError,
   }) {
     return booksDetailsSuccess(this);
   }
@@ -996,6 +1116,9 @@ class _$BooksDetailsSuccessImpl implements BooksDetailsSuccess {
     TResult? Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult? Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult? Function(BooksDetailsError value)? booksDetailsError,
+    TResult? Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult? Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult? Function(SearchBooksError value)? searchBooksError,
   }) {
     return booksDetailsSuccess?.call(this);
   }
@@ -1010,6 +1133,9 @@ class _$BooksDetailsSuccessImpl implements BooksDetailsSuccess {
     TResult Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult Function(BooksDetailsError value)? booksDetailsError,
+    TResult Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult Function(SearchBooksError value)? searchBooksError,
     required TResult orElse(),
   }) {
     if (booksDetailsSuccess != null) {
@@ -1109,6 +1235,9 @@ class _$BooksDetailsErrorImpl implements BooksDetailsError {
     required TResult Function() booksDetailsLoading,
     required TResult Function(BookDetailsResponse response) booksDetailsSuccess,
     required TResult Function(ErrorHandler errorHandler) booksDetailsError,
+    required TResult Function() searchBooksLoading,
+    required TResult Function(BooksModel response) searchBooksSuccess,
+    required TResult Function(ErrorHandler errorHandler) searchBooksError,
   }) {
     return booksDetailsError(errorHandler);
   }
@@ -1123,6 +1252,9 @@ class _$BooksDetailsErrorImpl implements BooksDetailsError {
     TResult? Function()? booksDetailsLoading,
     TResult? Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult? Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult? Function()? searchBooksLoading,
+    TResult? Function(BooksModel response)? searchBooksSuccess,
+    TResult? Function(ErrorHandler errorHandler)? searchBooksError,
   }) {
     return booksDetailsError?.call(errorHandler);
   }
@@ -1137,6 +1269,9 @@ class _$BooksDetailsErrorImpl implements BooksDetailsError {
     TResult Function()? booksDetailsLoading,
     TResult Function(BookDetailsResponse response)? booksDetailsSuccess,
     TResult Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult Function()? searchBooksLoading,
+    TResult Function(BooksModel response)? searchBooksSuccess,
+    TResult Function(ErrorHandler errorHandler)? searchBooksError,
     required TResult orElse(),
   }) {
     if (booksDetailsError != null) {
@@ -1155,6 +1290,9 @@ class _$BooksDetailsErrorImpl implements BooksDetailsError {
     required TResult Function(BooksDetailsLoading value) booksDetailsLoading,
     required TResult Function(BooksDetailsSuccess value) booksDetailsSuccess,
     required TResult Function(BooksDetailsError value) booksDetailsError,
+    required TResult Function(SearchBooksLoading value) searchBooksLoading,
+    required TResult Function(SearchBooksSuccess value) searchBooksSuccess,
+    required TResult Function(SearchBooksError value) searchBooksError,
   }) {
     return booksDetailsError(this);
   }
@@ -1169,6 +1307,9 @@ class _$BooksDetailsErrorImpl implements BooksDetailsError {
     TResult? Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult? Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult? Function(BooksDetailsError value)? booksDetailsError,
+    TResult? Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult? Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult? Function(SearchBooksError value)? searchBooksError,
   }) {
     return booksDetailsError?.call(this);
   }
@@ -1183,6 +1324,9 @@ class _$BooksDetailsErrorImpl implements BooksDetailsError {
     TResult Function(BooksDetailsLoading value)? booksDetailsLoading,
     TResult Function(BooksDetailsSuccess value)? booksDetailsSuccess,
     TResult Function(BooksDetailsError value)? booksDetailsError,
+    TResult Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult Function(SearchBooksError value)? searchBooksError,
     required TResult orElse(),
   }) {
     if (booksDetailsError != null) {
@@ -1202,5 +1346,540 @@ abstract class BooksDetailsError implements FeedState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BooksDetailsErrorImplCopyWith<_$BooksDetailsErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SearchBooksLoadingImplCopyWith<$Res> {
+  factory _$$SearchBooksLoadingImplCopyWith(_$SearchBooksLoadingImpl value,
+          $Res Function(_$SearchBooksLoadingImpl) then) =
+      __$$SearchBooksLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SearchBooksLoadingImplCopyWithImpl<$Res>
+    extends _$FeedStateCopyWithImpl<$Res, _$SearchBooksLoadingImpl>
+    implements _$$SearchBooksLoadingImplCopyWith<$Res> {
+  __$$SearchBooksLoadingImplCopyWithImpl(_$SearchBooksLoadingImpl _value,
+      $Res Function(_$SearchBooksLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FeedState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SearchBooksLoadingImpl implements SearchBooksLoading {
+  const _$SearchBooksLoadingImpl();
+
+  @override
+  String toString() {
+    return 'FeedState.searchBooksLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SearchBooksLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() booksTopWeekLoading,
+    required TResult Function(BooksModel response) booksTopWeekSuccess,
+    required TResult Function(ErrorHandler errorHandler) booksTopWeekError,
+    required TResult Function() booksDetailsLoading,
+    required TResult Function(BookDetailsResponse response) booksDetailsSuccess,
+    required TResult Function(ErrorHandler errorHandler) booksDetailsError,
+    required TResult Function() searchBooksLoading,
+    required TResult Function(BooksModel response) searchBooksSuccess,
+    required TResult Function(ErrorHandler errorHandler) searchBooksError,
+  }) {
+    return searchBooksLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? booksTopWeekLoading,
+    TResult? Function(BooksModel response)? booksTopWeekSuccess,
+    TResult? Function(ErrorHandler errorHandler)? booksTopWeekError,
+    TResult? Function()? booksDetailsLoading,
+    TResult? Function(BookDetailsResponse response)? booksDetailsSuccess,
+    TResult? Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult? Function()? searchBooksLoading,
+    TResult? Function(BooksModel response)? searchBooksSuccess,
+    TResult? Function(ErrorHandler errorHandler)? searchBooksError,
+  }) {
+    return searchBooksLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? booksTopWeekLoading,
+    TResult Function(BooksModel response)? booksTopWeekSuccess,
+    TResult Function(ErrorHandler errorHandler)? booksTopWeekError,
+    TResult Function()? booksDetailsLoading,
+    TResult Function(BookDetailsResponse response)? booksDetailsSuccess,
+    TResult Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult Function()? searchBooksLoading,
+    TResult Function(BooksModel response)? searchBooksSuccess,
+    TResult Function(ErrorHandler errorHandler)? searchBooksError,
+    required TResult orElse(),
+  }) {
+    if (searchBooksLoading != null) {
+      return searchBooksLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(BooksTopWeekLoading value) booksTopWeekLoading,
+    required TResult Function(BooksTopWeekSuccess value) booksTopWeekSuccess,
+    required TResult Function(BooksTopWeekError value) booksTopWeekError,
+    required TResult Function(BooksDetailsLoading value) booksDetailsLoading,
+    required TResult Function(BooksDetailsSuccess value) booksDetailsSuccess,
+    required TResult Function(BooksDetailsError value) booksDetailsError,
+    required TResult Function(SearchBooksLoading value) searchBooksLoading,
+    required TResult Function(SearchBooksSuccess value) searchBooksSuccess,
+    required TResult Function(SearchBooksError value) searchBooksError,
+  }) {
+    return searchBooksLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(BooksTopWeekLoading value)? booksTopWeekLoading,
+    TResult? Function(BooksTopWeekSuccess value)? booksTopWeekSuccess,
+    TResult? Function(BooksTopWeekError value)? booksTopWeekError,
+    TResult? Function(BooksDetailsLoading value)? booksDetailsLoading,
+    TResult? Function(BooksDetailsSuccess value)? booksDetailsSuccess,
+    TResult? Function(BooksDetailsError value)? booksDetailsError,
+    TResult? Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult? Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult? Function(SearchBooksError value)? searchBooksError,
+  }) {
+    return searchBooksLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(BooksTopWeekLoading value)? booksTopWeekLoading,
+    TResult Function(BooksTopWeekSuccess value)? booksTopWeekSuccess,
+    TResult Function(BooksTopWeekError value)? booksTopWeekError,
+    TResult Function(BooksDetailsLoading value)? booksDetailsLoading,
+    TResult Function(BooksDetailsSuccess value)? booksDetailsSuccess,
+    TResult Function(BooksDetailsError value)? booksDetailsError,
+    TResult Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult Function(SearchBooksError value)? searchBooksError,
+    required TResult orElse(),
+  }) {
+    if (searchBooksLoading != null) {
+      return searchBooksLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchBooksLoading implements FeedState {
+  const factory SearchBooksLoading() = _$SearchBooksLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$SearchBooksSuccessImplCopyWith<$Res> {
+  factory _$$SearchBooksSuccessImplCopyWith(_$SearchBooksSuccessImpl value,
+          $Res Function(_$SearchBooksSuccessImpl) then) =
+      __$$SearchBooksSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({BooksModel response});
+}
+
+/// @nodoc
+class __$$SearchBooksSuccessImplCopyWithImpl<$Res>
+    extends _$FeedStateCopyWithImpl<$Res, _$SearchBooksSuccessImpl>
+    implements _$$SearchBooksSuccessImplCopyWith<$Res> {
+  __$$SearchBooksSuccessImplCopyWithImpl(_$SearchBooksSuccessImpl _value,
+      $Res Function(_$SearchBooksSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FeedState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? response = null,
+  }) {
+    return _then(_$SearchBooksSuccessImpl(
+      null == response
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as BooksModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchBooksSuccessImpl implements SearchBooksSuccess {
+  const _$SearchBooksSuccessImpl(this.response);
+
+  @override
+  final BooksModel response;
+
+  @override
+  String toString() {
+    return 'FeedState.searchBooksSuccess(response: $response)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchBooksSuccessImpl &&
+            (identical(other.response, response) ||
+                other.response == response));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, response);
+
+  /// Create a copy of FeedState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchBooksSuccessImplCopyWith<_$SearchBooksSuccessImpl> get copyWith =>
+      __$$SearchBooksSuccessImplCopyWithImpl<_$SearchBooksSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() booksTopWeekLoading,
+    required TResult Function(BooksModel response) booksTopWeekSuccess,
+    required TResult Function(ErrorHandler errorHandler) booksTopWeekError,
+    required TResult Function() booksDetailsLoading,
+    required TResult Function(BookDetailsResponse response) booksDetailsSuccess,
+    required TResult Function(ErrorHandler errorHandler) booksDetailsError,
+    required TResult Function() searchBooksLoading,
+    required TResult Function(BooksModel response) searchBooksSuccess,
+    required TResult Function(ErrorHandler errorHandler) searchBooksError,
+  }) {
+    return searchBooksSuccess(response);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? booksTopWeekLoading,
+    TResult? Function(BooksModel response)? booksTopWeekSuccess,
+    TResult? Function(ErrorHandler errorHandler)? booksTopWeekError,
+    TResult? Function()? booksDetailsLoading,
+    TResult? Function(BookDetailsResponse response)? booksDetailsSuccess,
+    TResult? Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult? Function()? searchBooksLoading,
+    TResult? Function(BooksModel response)? searchBooksSuccess,
+    TResult? Function(ErrorHandler errorHandler)? searchBooksError,
+  }) {
+    return searchBooksSuccess?.call(response);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? booksTopWeekLoading,
+    TResult Function(BooksModel response)? booksTopWeekSuccess,
+    TResult Function(ErrorHandler errorHandler)? booksTopWeekError,
+    TResult Function()? booksDetailsLoading,
+    TResult Function(BookDetailsResponse response)? booksDetailsSuccess,
+    TResult Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult Function()? searchBooksLoading,
+    TResult Function(BooksModel response)? searchBooksSuccess,
+    TResult Function(ErrorHandler errorHandler)? searchBooksError,
+    required TResult orElse(),
+  }) {
+    if (searchBooksSuccess != null) {
+      return searchBooksSuccess(response);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(BooksTopWeekLoading value) booksTopWeekLoading,
+    required TResult Function(BooksTopWeekSuccess value) booksTopWeekSuccess,
+    required TResult Function(BooksTopWeekError value) booksTopWeekError,
+    required TResult Function(BooksDetailsLoading value) booksDetailsLoading,
+    required TResult Function(BooksDetailsSuccess value) booksDetailsSuccess,
+    required TResult Function(BooksDetailsError value) booksDetailsError,
+    required TResult Function(SearchBooksLoading value) searchBooksLoading,
+    required TResult Function(SearchBooksSuccess value) searchBooksSuccess,
+    required TResult Function(SearchBooksError value) searchBooksError,
+  }) {
+    return searchBooksSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(BooksTopWeekLoading value)? booksTopWeekLoading,
+    TResult? Function(BooksTopWeekSuccess value)? booksTopWeekSuccess,
+    TResult? Function(BooksTopWeekError value)? booksTopWeekError,
+    TResult? Function(BooksDetailsLoading value)? booksDetailsLoading,
+    TResult? Function(BooksDetailsSuccess value)? booksDetailsSuccess,
+    TResult? Function(BooksDetailsError value)? booksDetailsError,
+    TResult? Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult? Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult? Function(SearchBooksError value)? searchBooksError,
+  }) {
+    return searchBooksSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(BooksTopWeekLoading value)? booksTopWeekLoading,
+    TResult Function(BooksTopWeekSuccess value)? booksTopWeekSuccess,
+    TResult Function(BooksTopWeekError value)? booksTopWeekError,
+    TResult Function(BooksDetailsLoading value)? booksDetailsLoading,
+    TResult Function(BooksDetailsSuccess value)? booksDetailsSuccess,
+    TResult Function(BooksDetailsError value)? booksDetailsError,
+    TResult Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult Function(SearchBooksError value)? searchBooksError,
+    required TResult orElse(),
+  }) {
+    if (searchBooksSuccess != null) {
+      return searchBooksSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchBooksSuccess implements FeedState {
+  const factory SearchBooksSuccess(final BooksModel response) =
+      _$SearchBooksSuccessImpl;
+
+  BooksModel get response;
+
+  /// Create a copy of FeedState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SearchBooksSuccessImplCopyWith<_$SearchBooksSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SearchBooksErrorImplCopyWith<$Res> {
+  factory _$$SearchBooksErrorImplCopyWith(_$SearchBooksErrorImpl value,
+          $Res Function(_$SearchBooksErrorImpl) then) =
+      __$$SearchBooksErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ErrorHandler errorHandler});
+}
+
+/// @nodoc
+class __$$SearchBooksErrorImplCopyWithImpl<$Res>
+    extends _$FeedStateCopyWithImpl<$Res, _$SearchBooksErrorImpl>
+    implements _$$SearchBooksErrorImplCopyWith<$Res> {
+  __$$SearchBooksErrorImplCopyWithImpl(_$SearchBooksErrorImpl _value,
+      $Res Function(_$SearchBooksErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FeedState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorHandler = null,
+  }) {
+    return _then(_$SearchBooksErrorImpl(
+      null == errorHandler
+          ? _value.errorHandler
+          : errorHandler // ignore: cast_nullable_to_non_nullable
+              as ErrorHandler,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchBooksErrorImpl implements SearchBooksError {
+  const _$SearchBooksErrorImpl(this.errorHandler);
+
+  @override
+  final ErrorHandler errorHandler;
+
+  @override
+  String toString() {
+    return 'FeedState.searchBooksError(errorHandler: $errorHandler)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchBooksErrorImpl &&
+            (identical(other.errorHandler, errorHandler) ||
+                other.errorHandler == errorHandler));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorHandler);
+
+  /// Create a copy of FeedState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchBooksErrorImplCopyWith<_$SearchBooksErrorImpl> get copyWith =>
+      __$$SearchBooksErrorImplCopyWithImpl<_$SearchBooksErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() booksTopWeekLoading,
+    required TResult Function(BooksModel response) booksTopWeekSuccess,
+    required TResult Function(ErrorHandler errorHandler) booksTopWeekError,
+    required TResult Function() booksDetailsLoading,
+    required TResult Function(BookDetailsResponse response) booksDetailsSuccess,
+    required TResult Function(ErrorHandler errorHandler) booksDetailsError,
+    required TResult Function() searchBooksLoading,
+    required TResult Function(BooksModel response) searchBooksSuccess,
+    required TResult Function(ErrorHandler errorHandler) searchBooksError,
+  }) {
+    return searchBooksError(errorHandler);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? booksTopWeekLoading,
+    TResult? Function(BooksModel response)? booksTopWeekSuccess,
+    TResult? Function(ErrorHandler errorHandler)? booksTopWeekError,
+    TResult? Function()? booksDetailsLoading,
+    TResult? Function(BookDetailsResponse response)? booksDetailsSuccess,
+    TResult? Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult? Function()? searchBooksLoading,
+    TResult? Function(BooksModel response)? searchBooksSuccess,
+    TResult? Function(ErrorHandler errorHandler)? searchBooksError,
+  }) {
+    return searchBooksError?.call(errorHandler);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? booksTopWeekLoading,
+    TResult Function(BooksModel response)? booksTopWeekSuccess,
+    TResult Function(ErrorHandler errorHandler)? booksTopWeekError,
+    TResult Function()? booksDetailsLoading,
+    TResult Function(BookDetailsResponse response)? booksDetailsSuccess,
+    TResult Function(ErrorHandler errorHandler)? booksDetailsError,
+    TResult Function()? searchBooksLoading,
+    TResult Function(BooksModel response)? searchBooksSuccess,
+    TResult Function(ErrorHandler errorHandler)? searchBooksError,
+    required TResult orElse(),
+  }) {
+    if (searchBooksError != null) {
+      return searchBooksError(errorHandler);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(BooksTopWeekLoading value) booksTopWeekLoading,
+    required TResult Function(BooksTopWeekSuccess value) booksTopWeekSuccess,
+    required TResult Function(BooksTopWeekError value) booksTopWeekError,
+    required TResult Function(BooksDetailsLoading value) booksDetailsLoading,
+    required TResult Function(BooksDetailsSuccess value) booksDetailsSuccess,
+    required TResult Function(BooksDetailsError value) booksDetailsError,
+    required TResult Function(SearchBooksLoading value) searchBooksLoading,
+    required TResult Function(SearchBooksSuccess value) searchBooksSuccess,
+    required TResult Function(SearchBooksError value) searchBooksError,
+  }) {
+    return searchBooksError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(BooksTopWeekLoading value)? booksTopWeekLoading,
+    TResult? Function(BooksTopWeekSuccess value)? booksTopWeekSuccess,
+    TResult? Function(BooksTopWeekError value)? booksTopWeekError,
+    TResult? Function(BooksDetailsLoading value)? booksDetailsLoading,
+    TResult? Function(BooksDetailsSuccess value)? booksDetailsSuccess,
+    TResult? Function(BooksDetailsError value)? booksDetailsError,
+    TResult? Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult? Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult? Function(SearchBooksError value)? searchBooksError,
+  }) {
+    return searchBooksError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(BooksTopWeekLoading value)? booksTopWeekLoading,
+    TResult Function(BooksTopWeekSuccess value)? booksTopWeekSuccess,
+    TResult Function(BooksTopWeekError value)? booksTopWeekError,
+    TResult Function(BooksDetailsLoading value)? booksDetailsLoading,
+    TResult Function(BooksDetailsSuccess value)? booksDetailsSuccess,
+    TResult Function(BooksDetailsError value)? booksDetailsError,
+    TResult Function(SearchBooksLoading value)? searchBooksLoading,
+    TResult Function(SearchBooksSuccess value)? searchBooksSuccess,
+    TResult Function(SearchBooksError value)? searchBooksError,
+    required TResult orElse(),
+  }) {
+    if (searchBooksError != null) {
+      return searchBooksError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchBooksError implements FeedState {
+  const factory SearchBooksError(final ErrorHandler errorHandler) =
+      _$SearchBooksErrorImpl;
+
+  ErrorHandler get errorHandler;
+
+  /// Create a copy of FeedState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SearchBooksErrorImplCopyWith<_$SearchBooksErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
