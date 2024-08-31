@@ -17,12 +17,9 @@ class SearchListView extends StatelessWidget {
       itemCount: model.items!.length,
       itemBuilder: (context, index) {
         var item = model.items![index];
-        ImageLinks imagePath = item.volumeInfo!.imageLinks!;
-        String title = item.volumeInfo!.title!;
-        String? description = item.volumeInfo!.description;
         return GestureDetector(
             onTap: () {},
-            child:SearchItemList( imagePath: imagePath != null? imagePath.thumbnail : defaultBook  , title: title, description: description??'description',));
+            child:SearchItemList(model: item, ));
       },
       separatorBuilder: (BuildContext context, int index) {
         return verticalSpace(10);

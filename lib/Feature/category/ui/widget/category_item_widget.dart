@@ -7,6 +7,7 @@ import 'package:shimmer/shimmer.dart';
 import '../../../../core/helper/spacing.dart';
 import '../../../../core/theme/colors.dart';
 import '../../../../core/theme/styles.dart';
+import '../../../../core/utils/constants.dart';
 
 class CategoryItemWidget extends StatelessWidget {
   final Item model ;
@@ -27,7 +28,7 @@ class CategoryItemWidget extends StatelessWidget {
         children: [
           Expanded(
             child: CachedNetworkImage(
-              imageUrl: model.volumeInfo!.imageLinks!.thumbnail!,
+              imageUrl: model.volumeInfo?.imageLinks?.thumbnail ?? defaultBook,
               progressIndicatorBuilder: (context, url, downloadProgress) {
                 return Shimmer.fromColors(
                   baseColor: AppColor.greyScale100,
@@ -57,6 +58,21 @@ class CategoryItemWidget extends StatelessWidget {
                   ),
                 ),
               ),
+              errorWidget: (context, url, error) {
+                return Container(
+                  width: 158.w,
+                  height: 120.h,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(12.0),
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/book3.png'), // Ensure this asset exists
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                );
+              },
             ),
           ), // verticalSpace(20),
           Text(model.volumeInfo!.title!,

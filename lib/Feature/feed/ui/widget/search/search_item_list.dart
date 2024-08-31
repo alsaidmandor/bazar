@@ -1,3 +1,4 @@
+import 'package:bazaar/Feature/feed/data/model/books_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,21 +7,21 @@ import 'package:shimmer/shimmer.dart';
 import '../../../../../core/helper/spacing.dart';
 import '../../../../../core/theme/colors.dart';
 import '../../../../../core/theme/styles.dart';
-import '../../../data/model/book_details_response.dart';
+import '../../../../../core/utils/constants.dart';
 
 class SearchItemList extends StatelessWidget {
+  final Item model;
 
-  final String?  imagePath ;
-  final String  title ;
-  final String  description ;
-  const SearchItemList({super.key, required this.imagePath, required this.title, required this.description, });
+  const SearchItemList({
+    super.key,
+    required this.model,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 70,
-      margin:
-      const EdgeInsets.fromLTRB(
+      margin: const EdgeInsets.fromLTRB(
         20.0,
         5.0,
         20.0,
@@ -33,7 +34,7 @@ class SearchItemList extends StatelessWidget {
             radius: 30,
             backgroundColor: AppColor.greyScale100,
             child: CachedNetworkImage(
-              imageUrl:imagePath!,
+              imageUrl: model.volumeInfo?.imageLinks?.thumbnail ?? defaultBook,
               progressIndicatorBuilder: (context, url, downloadProgress) {
                 return Shimmer.fromColors(
                   baseColor: AppColor.greyScale100,
@@ -44,11 +45,12 @@ class SearchItemList extends StatelessWidget {
                   ),
                 );
               },
-              imageBuilder: (context, imageProvider) =>
-                  CircleAvatar(
-                    radius: 50,
-                    backgroundImage: imageProvider,
-                  ),
+              imageBuilder: (context, imageProvider) => CircleAvatar(
+                radius: 50,
+                backgroundImage: imageProvider,
+              ),
+              errorWidget: (context, url, error) =>
+                  const Icon(Icons.error, color: AppColor.red),
             ),
           ),
           // verticalSpace(20),
@@ -59,25 +61,23 @@ class SearchItemList extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(title,
+                Text(model.volumeInfo?.title ?? 'not found',
                     style: TextStyles.fontBody14BlackMedium
                         .copyWith(height: 1.5, overflow: TextOverflow.ellipsis),
                     textAlign: TextAlign.start,
                     overflow: TextOverflow.ellipsis),
                 Text(
-                   '',
+                  model.volumeInfo?.description ?? 'not found',
                   style: TextStyles.fontBody12BlackBold
                       .copyWith(color: AppColor.greyScale500, height: 1.5),
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.start,
                   maxLines: 2,
                 ),
-
               ],
             ),
           ),
         ],
-
       ),
     );
   }
