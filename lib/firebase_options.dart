@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '418118569494',
     projectId: 'bazar-d2306',
     storageBucket: 'bazar-d2306.appspot.com',
+    androidClientId: '418118569494-ctenaf85nbk0u78iokdc466s5d5pd32a.apps.googleusercontent.com',
     iosClientId: '418118569494-k9dotf8c28f7d64rgigdfts2ek1gqdtd.apps.googleusercontent.com',
     iosBundleId: 'com.example.bazaar',
   );
