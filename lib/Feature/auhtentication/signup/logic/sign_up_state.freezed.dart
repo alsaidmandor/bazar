@@ -28,6 +28,9 @@ mixin _$SignupState<T> {
     required TResult Function() signupSubmitOtpLoading,
     required TResult Function() signupSubmitOtpSuccess,
     required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +45,9 @@ mixin _$SignupState<T> {
     TResult? Function()? signupSubmitOtpLoading,
     TResult? Function()? signupSubmitOtpSuccess,
     TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +62,9 @@ mixin _$SignupState<T> {
     TResult Function()? signupSubmitOtpLoading,
     TResult Function()? signupSubmitOtpSuccess,
     TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -77,6 +86,11 @@ mixin _$SignupState<T> {
         signupSubmitOtpSuccess,
     required TResult Function(SignupSubmitOtpError<T> value)
         signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -94,6 +108,9 @@ mixin _$SignupState<T> {
     TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -111,6 +128,9 @@ mixin _$SignupState<T> {
     TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -188,6 +208,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() signupSubmitOtpLoading,
     required TResult Function() signupSubmitOtpSuccess,
     required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
   }) {
     return initial();
   }
@@ -205,6 +228,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? signupSubmitOtpLoading,
     TResult? Function()? signupSubmitOtpSuccess,
     TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
   }) {
     return initial?.call();
   }
@@ -222,6 +248,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? signupSubmitOtpLoading,
     TResult Function()? signupSubmitOtpSuccess,
     TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -249,6 +278,11 @@ class _$InitialImpl<T> implements _Initial<T> {
         signupSubmitOtpSuccess,
     required TResult Function(SignupSubmitOtpError<T> value)
         signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
   }) {
     return initial(this);
   }
@@ -269,6 +303,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
   }) {
     return initial?.call(this);
   }
@@ -289,6 +326,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -353,6 +393,9 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
     required TResult Function() signupSubmitOtpLoading,
     required TResult Function() signupSubmitOtpSuccess,
     required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
   }) {
     return signupLoading();
   }
@@ -370,6 +413,9 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
     TResult? Function()? signupSubmitOtpLoading,
     TResult? Function()? signupSubmitOtpSuccess,
     TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
   }) {
     return signupLoading?.call();
   }
@@ -387,6 +433,9 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
     TResult Function()? signupSubmitOtpLoading,
     TResult Function()? signupSubmitOtpSuccess,
     TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupLoading != null) {
@@ -414,6 +463,11 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
         signupSubmitOtpSuccess,
     required TResult Function(SignupSubmitOtpError<T> value)
         signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
   }) {
     return signupLoading(this);
   }
@@ -434,6 +488,9 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
     TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
   }) {
     return signupLoading?.call(this);
   }
@@ -454,6 +511,9 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
     TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupLoading != null) {
@@ -547,6 +607,9 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
     required TResult Function() signupSubmitOtpLoading,
     required TResult Function() signupSubmitOtpSuccess,
     required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
   }) {
     return signupSuccess(data);
   }
@@ -564,6 +627,9 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
     TResult? Function()? signupSubmitOtpLoading,
     TResult? Function()? signupSubmitOtpSuccess,
     TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
   }) {
     return signupSuccess?.call(data);
   }
@@ -581,6 +647,9 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
     TResult Function()? signupSubmitOtpLoading,
     TResult Function()? signupSubmitOtpSuccess,
     TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSuccess != null) {
@@ -608,6 +677,11 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
         signupSubmitOtpSuccess,
     required TResult Function(SignupSubmitOtpError<T> value)
         signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
   }) {
     return signupSuccess(this);
   }
@@ -628,6 +702,9 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
     TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
   }) {
     return signupSuccess?.call(this);
   }
@@ -648,6 +725,9 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
     TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSuccess != null) {
@@ -748,6 +828,9 @@ class _$SignupErrorImpl<T> implements SignupError<T> {
     required TResult Function() signupSubmitOtpLoading,
     required TResult Function() signupSubmitOtpSuccess,
     required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
   }) {
     return signupError(error);
   }
@@ -765,6 +848,9 @@ class _$SignupErrorImpl<T> implements SignupError<T> {
     TResult? Function()? signupSubmitOtpLoading,
     TResult? Function()? signupSubmitOtpSuccess,
     TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
   }) {
     return signupError?.call(error);
   }
@@ -782,6 +868,9 @@ class _$SignupErrorImpl<T> implements SignupError<T> {
     TResult Function()? signupSubmitOtpLoading,
     TResult Function()? signupSubmitOtpSuccess,
     TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupError != null) {
@@ -809,6 +898,11 @@ class _$SignupErrorImpl<T> implements SignupError<T> {
         signupSubmitOtpSuccess,
     required TResult Function(SignupSubmitOtpError<T> value)
         signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
   }) {
     return signupError(this);
   }
@@ -829,6 +923,9 @@ class _$SignupErrorImpl<T> implements SignupError<T> {
     TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
   }) {
     return signupError?.call(this);
   }
@@ -849,6 +946,9 @@ class _$SignupErrorImpl<T> implements SignupError<T> {
     TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupError != null) {
@@ -927,6 +1027,9 @@ class _$SignupSubmitPhoneNumberLoadingImpl<T>
     required TResult Function() signupSubmitOtpLoading,
     required TResult Function() signupSubmitOtpSuccess,
     required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
   }) {
     return signupSubmitPhoneNumberLoading();
   }
@@ -944,6 +1047,9 @@ class _$SignupSubmitPhoneNumberLoadingImpl<T>
     TResult? Function()? signupSubmitOtpLoading,
     TResult? Function()? signupSubmitOtpSuccess,
     TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
   }) {
     return signupSubmitPhoneNumberLoading?.call();
   }
@@ -961,6 +1067,9 @@ class _$SignupSubmitPhoneNumberLoadingImpl<T>
     TResult Function()? signupSubmitOtpLoading,
     TResult Function()? signupSubmitOtpSuccess,
     TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSubmitPhoneNumberLoading != null) {
@@ -988,6 +1097,11 @@ class _$SignupSubmitPhoneNumberLoadingImpl<T>
         signupSubmitOtpSuccess,
     required TResult Function(SignupSubmitOtpError<T> value)
         signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
   }) {
     return signupSubmitPhoneNumberLoading(this);
   }
@@ -1008,6 +1122,9 @@ class _$SignupSubmitPhoneNumberLoadingImpl<T>
     TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
   }) {
     return signupSubmitPhoneNumberLoading?.call(this);
   }
@@ -1028,6 +1145,9 @@ class _$SignupSubmitPhoneNumberLoadingImpl<T>
     TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSubmitPhoneNumberLoading != null) {
@@ -1098,6 +1218,9 @@ class _$SignupSubmitPhoneNumberSuccessImpl<T>
     required TResult Function() signupSubmitOtpLoading,
     required TResult Function() signupSubmitOtpSuccess,
     required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
   }) {
     return signupSubmitPhoneNumberSuccess();
   }
@@ -1115,6 +1238,9 @@ class _$SignupSubmitPhoneNumberSuccessImpl<T>
     TResult? Function()? signupSubmitOtpLoading,
     TResult? Function()? signupSubmitOtpSuccess,
     TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
   }) {
     return signupSubmitPhoneNumberSuccess?.call();
   }
@@ -1132,6 +1258,9 @@ class _$SignupSubmitPhoneNumberSuccessImpl<T>
     TResult Function()? signupSubmitOtpLoading,
     TResult Function()? signupSubmitOtpSuccess,
     TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSubmitPhoneNumberSuccess != null) {
@@ -1159,6 +1288,11 @@ class _$SignupSubmitPhoneNumberSuccessImpl<T>
         signupSubmitOtpSuccess,
     required TResult Function(SignupSubmitOtpError<T> value)
         signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
   }) {
     return signupSubmitPhoneNumberSuccess(this);
   }
@@ -1179,6 +1313,9 @@ class _$SignupSubmitPhoneNumberSuccessImpl<T>
     TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
   }) {
     return signupSubmitPhoneNumberSuccess?.call(this);
   }
@@ -1199,6 +1336,9 @@ class _$SignupSubmitPhoneNumberSuccessImpl<T>
     TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSubmitPhoneNumberSuccess != null) {
@@ -1297,6 +1437,9 @@ class _$SignupSubmitPhoneNumberErrorImpl<T>
     required TResult Function() signupSubmitOtpLoading,
     required TResult Function() signupSubmitOtpSuccess,
     required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
   }) {
     return signupSubmitPhoneNumberError(error);
   }
@@ -1314,6 +1457,9 @@ class _$SignupSubmitPhoneNumberErrorImpl<T>
     TResult? Function()? signupSubmitOtpLoading,
     TResult? Function()? signupSubmitOtpSuccess,
     TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
   }) {
     return signupSubmitPhoneNumberError?.call(error);
   }
@@ -1331,6 +1477,9 @@ class _$SignupSubmitPhoneNumberErrorImpl<T>
     TResult Function()? signupSubmitOtpLoading,
     TResult Function()? signupSubmitOtpSuccess,
     TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSubmitPhoneNumberError != null) {
@@ -1358,6 +1507,11 @@ class _$SignupSubmitPhoneNumberErrorImpl<T>
         signupSubmitOtpSuccess,
     required TResult Function(SignupSubmitOtpError<T> value)
         signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
   }) {
     return signupSubmitPhoneNumberError(this);
   }
@@ -1378,6 +1532,9 @@ class _$SignupSubmitPhoneNumberErrorImpl<T>
     TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
   }) {
     return signupSubmitPhoneNumberError?.call(this);
   }
@@ -1398,6 +1555,9 @@ class _$SignupSubmitPhoneNumberErrorImpl<T>
     TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSubmitPhoneNumberError != null) {
@@ -1475,6 +1635,9 @@ class _$SignupSubmitOtpLoadingImpl<T> implements SignupSubmitOtpLoading<T> {
     required TResult Function() signupSubmitOtpLoading,
     required TResult Function() signupSubmitOtpSuccess,
     required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
   }) {
     return signupSubmitOtpLoading();
   }
@@ -1492,6 +1655,9 @@ class _$SignupSubmitOtpLoadingImpl<T> implements SignupSubmitOtpLoading<T> {
     TResult? Function()? signupSubmitOtpLoading,
     TResult? Function()? signupSubmitOtpSuccess,
     TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
   }) {
     return signupSubmitOtpLoading?.call();
   }
@@ -1509,6 +1675,9 @@ class _$SignupSubmitOtpLoadingImpl<T> implements SignupSubmitOtpLoading<T> {
     TResult Function()? signupSubmitOtpLoading,
     TResult Function()? signupSubmitOtpSuccess,
     TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSubmitOtpLoading != null) {
@@ -1536,6 +1705,11 @@ class _$SignupSubmitOtpLoadingImpl<T> implements SignupSubmitOtpLoading<T> {
         signupSubmitOtpSuccess,
     required TResult Function(SignupSubmitOtpError<T> value)
         signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
   }) {
     return signupSubmitOtpLoading(this);
   }
@@ -1556,6 +1730,9 @@ class _$SignupSubmitOtpLoadingImpl<T> implements SignupSubmitOtpLoading<T> {
     TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
   }) {
     return signupSubmitOtpLoading?.call(this);
   }
@@ -1576,6 +1753,9 @@ class _$SignupSubmitOtpLoadingImpl<T> implements SignupSubmitOtpLoading<T> {
     TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSubmitOtpLoading != null) {
@@ -1643,6 +1823,9 @@ class _$SignupSubmitOtpSuccessImpl<T> implements SignupSubmitOtpSuccess<T> {
     required TResult Function() signupSubmitOtpLoading,
     required TResult Function() signupSubmitOtpSuccess,
     required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
   }) {
     return signupSubmitOtpSuccess();
   }
@@ -1660,6 +1843,9 @@ class _$SignupSubmitOtpSuccessImpl<T> implements SignupSubmitOtpSuccess<T> {
     TResult? Function()? signupSubmitOtpLoading,
     TResult? Function()? signupSubmitOtpSuccess,
     TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
   }) {
     return signupSubmitOtpSuccess?.call();
   }
@@ -1677,6 +1863,9 @@ class _$SignupSubmitOtpSuccessImpl<T> implements SignupSubmitOtpSuccess<T> {
     TResult Function()? signupSubmitOtpLoading,
     TResult Function()? signupSubmitOtpSuccess,
     TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSubmitOtpSuccess != null) {
@@ -1704,6 +1893,11 @@ class _$SignupSubmitOtpSuccessImpl<T> implements SignupSubmitOtpSuccess<T> {
         signupSubmitOtpSuccess,
     required TResult Function(SignupSubmitOtpError<T> value)
         signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
   }) {
     return signupSubmitOtpSuccess(this);
   }
@@ -1724,6 +1918,9 @@ class _$SignupSubmitOtpSuccessImpl<T> implements SignupSubmitOtpSuccess<T> {
     TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
   }) {
     return signupSubmitOtpSuccess?.call(this);
   }
@@ -1744,6 +1941,9 @@ class _$SignupSubmitOtpSuccessImpl<T> implements SignupSubmitOtpSuccess<T> {
     TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSubmitOtpSuccess != null) {
@@ -1837,6 +2037,9 @@ class _$SignupSubmitOtpErrorImpl<T> implements SignupSubmitOtpError<T> {
     required TResult Function() signupSubmitOtpLoading,
     required TResult Function() signupSubmitOtpSuccess,
     required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
   }) {
     return signupSubmitOtpError(error);
   }
@@ -1854,6 +2057,9 @@ class _$SignupSubmitOtpErrorImpl<T> implements SignupSubmitOtpError<T> {
     TResult? Function()? signupSubmitOtpLoading,
     TResult? Function()? signupSubmitOtpSuccess,
     TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
   }) {
     return signupSubmitOtpError?.call(error);
   }
@@ -1871,6 +2077,9 @@ class _$SignupSubmitOtpErrorImpl<T> implements SignupSubmitOtpError<T> {
     TResult Function()? signupSubmitOtpLoading,
     TResult Function()? signupSubmitOtpSuccess,
     TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSubmitOtpError != null) {
@@ -1898,6 +2107,11 @@ class _$SignupSubmitOtpErrorImpl<T> implements SignupSubmitOtpError<T> {
         signupSubmitOtpSuccess,
     required TResult Function(SignupSubmitOtpError<T> value)
         signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
   }) {
     return signupSubmitOtpError(this);
   }
@@ -1918,6 +2132,9 @@ class _$SignupSubmitOtpErrorImpl<T> implements SignupSubmitOtpError<T> {
     TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
   }) {
     return signupSubmitOtpError?.call(this);
   }
@@ -1938,6 +2155,9 @@ class _$SignupSubmitOtpErrorImpl<T> implements SignupSubmitOtpError<T> {
     TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
     TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
     TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
     required TResult orElse(),
   }) {
     if (signupSubmitOtpError != null) {
@@ -1957,5 +2177,603 @@ abstract class SignupSubmitOtpError<T> implements SignupState<T> {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SignupSubmitOtpErrorImplCopyWith<T, _$SignupSubmitOtpErrorImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignupSaveDataLoadingImplCopyWith<T, $Res> {
+  factory _$$SignupSaveDataLoadingImplCopyWith(
+          _$SignupSaveDataLoadingImpl<T> value,
+          $Res Function(_$SignupSaveDataLoadingImpl<T>) then) =
+      __$$SignupSaveDataLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$SignupSaveDataLoadingImplCopyWithImpl<T, $Res>
+    extends _$SignupStateCopyWithImpl<T, $Res, _$SignupSaveDataLoadingImpl<T>>
+    implements _$$SignupSaveDataLoadingImplCopyWith<T, $Res> {
+  __$$SignupSaveDataLoadingImplCopyWithImpl(
+      _$SignupSaveDataLoadingImpl<T> _value,
+      $Res Function(_$SignupSaveDataLoadingImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SignupSaveDataLoadingImpl<T> implements SignupSaveDataLoading<T> {
+  const _$SignupSaveDataLoadingImpl();
+
+  @override
+  String toString() {
+    return 'SignupState<$T>.signupSaveDataLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignupSaveDataLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() signupLoading,
+    required TResult Function(T data) signupSuccess,
+    required TResult Function(String error) signupError,
+    required TResult Function() signupSubmitPhoneNumberLoading,
+    required TResult Function() signupSubmitPhoneNumberSuccess,
+    required TResult Function(String error) signupSubmitPhoneNumberError,
+    required TResult Function() signupSubmitOtpLoading,
+    required TResult Function() signupSubmitOtpSuccess,
+    required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
+  }) {
+    return signupSaveDataLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? signupLoading,
+    TResult? Function(T data)? signupSuccess,
+    TResult? Function(String error)? signupError,
+    TResult? Function()? signupSubmitPhoneNumberLoading,
+    TResult? Function()? signupSubmitPhoneNumberSuccess,
+    TResult? Function(String error)? signupSubmitPhoneNumberError,
+    TResult? Function()? signupSubmitOtpLoading,
+    TResult? Function()? signupSubmitOtpSuccess,
+    TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
+  }) {
+    return signupSaveDataLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? signupLoading,
+    TResult Function(T data)? signupSuccess,
+    TResult Function(String error)? signupError,
+    TResult Function()? signupSubmitPhoneNumberLoading,
+    TResult Function()? signupSubmitPhoneNumberSuccess,
+    TResult Function(String error)? signupSubmitPhoneNumberError,
+    TResult Function()? signupSubmitOtpLoading,
+    TResult Function()? signupSubmitOtpSuccess,
+    TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
+    required TResult orElse(),
+  }) {
+    if (signupSaveDataLoading != null) {
+      return signupSaveDataLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SignupLoading<T> value) signupLoading,
+    required TResult Function(SignupSuccess<T> value) signupSuccess,
+    required TResult Function(SignupError<T> value) signupError,
+    required TResult Function(SignupSubmitPhoneNumberLoading<T> value)
+        signupSubmitPhoneNumberLoading,
+    required TResult Function(SignupSubmitPhoneNumberSuccess<T> value)
+        signupSubmitPhoneNumberSuccess,
+    required TResult Function(SignupSubmitPhoneNumberError<T> value)
+        signupSubmitPhoneNumberError,
+    required TResult Function(SignupSubmitOtpLoading<T> value)
+        signupSubmitOtpLoading,
+    required TResult Function(SignupSubmitOtpSuccess<T> value)
+        signupSubmitOtpSuccess,
+    required TResult Function(SignupSubmitOtpError<T> value)
+        signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
+  }) {
+    return signupSaveDataLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SignupLoading<T> value)? signupLoading,
+    TResult? Function(SignupSuccess<T> value)? signupSuccess,
+    TResult? Function(SignupError<T> value)? signupError,
+    TResult? Function(SignupSubmitPhoneNumberLoading<T> value)?
+        signupSubmitPhoneNumberLoading,
+    TResult? Function(SignupSubmitPhoneNumberSuccess<T> value)?
+        signupSubmitPhoneNumberSuccess,
+    TResult? Function(SignupSubmitPhoneNumberError<T> value)?
+        signupSubmitPhoneNumberError,
+    TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
+    TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
+    TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
+  }) {
+    return signupSaveDataLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SignupLoading<T> value)? signupLoading,
+    TResult Function(SignupSuccess<T> value)? signupSuccess,
+    TResult Function(SignupError<T> value)? signupError,
+    TResult Function(SignupSubmitPhoneNumberLoading<T> value)?
+        signupSubmitPhoneNumberLoading,
+    TResult Function(SignupSubmitPhoneNumberSuccess<T> value)?
+        signupSubmitPhoneNumberSuccess,
+    TResult Function(SignupSubmitPhoneNumberError<T> value)?
+        signupSubmitPhoneNumberError,
+    TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
+    TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
+    TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
+    required TResult orElse(),
+  }) {
+    if (signupSaveDataLoading != null) {
+      return signupSaveDataLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignupSaveDataLoading<T> implements SignupState<T> {
+  const factory SignupSaveDataLoading() = _$SignupSaveDataLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$SignupSaveDataSuccessImplCopyWith<T, $Res> {
+  factory _$$SignupSaveDataSuccessImplCopyWith(
+          _$SignupSaveDataSuccessImpl<T> value,
+          $Res Function(_$SignupSaveDataSuccessImpl<T>) then) =
+      __$$SignupSaveDataSuccessImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$SignupSaveDataSuccessImplCopyWithImpl<T, $Res>
+    extends _$SignupStateCopyWithImpl<T, $Res, _$SignupSaveDataSuccessImpl<T>>
+    implements _$$SignupSaveDataSuccessImplCopyWith<T, $Res> {
+  __$$SignupSaveDataSuccessImplCopyWithImpl(
+      _$SignupSaveDataSuccessImpl<T> _value,
+      $Res Function(_$SignupSaveDataSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SignupSaveDataSuccessImpl<T> implements SignupSaveDataSuccess<T> {
+  const _$SignupSaveDataSuccessImpl();
+
+  @override
+  String toString() {
+    return 'SignupState<$T>.signupSaveDataSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignupSaveDataSuccessImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() signupLoading,
+    required TResult Function(T data) signupSuccess,
+    required TResult Function(String error) signupError,
+    required TResult Function() signupSubmitPhoneNumberLoading,
+    required TResult Function() signupSubmitPhoneNumberSuccess,
+    required TResult Function(String error) signupSubmitPhoneNumberError,
+    required TResult Function() signupSubmitOtpLoading,
+    required TResult Function() signupSubmitOtpSuccess,
+    required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
+  }) {
+    return signupSaveDataSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? signupLoading,
+    TResult? Function(T data)? signupSuccess,
+    TResult? Function(String error)? signupError,
+    TResult? Function()? signupSubmitPhoneNumberLoading,
+    TResult? Function()? signupSubmitPhoneNumberSuccess,
+    TResult? Function(String error)? signupSubmitPhoneNumberError,
+    TResult? Function()? signupSubmitOtpLoading,
+    TResult? Function()? signupSubmitOtpSuccess,
+    TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
+  }) {
+    return signupSaveDataSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? signupLoading,
+    TResult Function(T data)? signupSuccess,
+    TResult Function(String error)? signupError,
+    TResult Function()? signupSubmitPhoneNumberLoading,
+    TResult Function()? signupSubmitPhoneNumberSuccess,
+    TResult Function(String error)? signupSubmitPhoneNumberError,
+    TResult Function()? signupSubmitOtpLoading,
+    TResult Function()? signupSubmitOtpSuccess,
+    TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
+    required TResult orElse(),
+  }) {
+    if (signupSaveDataSuccess != null) {
+      return signupSaveDataSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SignupLoading<T> value) signupLoading,
+    required TResult Function(SignupSuccess<T> value) signupSuccess,
+    required TResult Function(SignupError<T> value) signupError,
+    required TResult Function(SignupSubmitPhoneNumberLoading<T> value)
+        signupSubmitPhoneNumberLoading,
+    required TResult Function(SignupSubmitPhoneNumberSuccess<T> value)
+        signupSubmitPhoneNumberSuccess,
+    required TResult Function(SignupSubmitPhoneNumberError<T> value)
+        signupSubmitPhoneNumberError,
+    required TResult Function(SignupSubmitOtpLoading<T> value)
+        signupSubmitOtpLoading,
+    required TResult Function(SignupSubmitOtpSuccess<T> value)
+        signupSubmitOtpSuccess,
+    required TResult Function(SignupSubmitOtpError<T> value)
+        signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
+  }) {
+    return signupSaveDataSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SignupLoading<T> value)? signupLoading,
+    TResult? Function(SignupSuccess<T> value)? signupSuccess,
+    TResult? Function(SignupError<T> value)? signupError,
+    TResult? Function(SignupSubmitPhoneNumberLoading<T> value)?
+        signupSubmitPhoneNumberLoading,
+    TResult? Function(SignupSubmitPhoneNumberSuccess<T> value)?
+        signupSubmitPhoneNumberSuccess,
+    TResult? Function(SignupSubmitPhoneNumberError<T> value)?
+        signupSubmitPhoneNumberError,
+    TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
+    TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
+    TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
+  }) {
+    return signupSaveDataSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SignupLoading<T> value)? signupLoading,
+    TResult Function(SignupSuccess<T> value)? signupSuccess,
+    TResult Function(SignupError<T> value)? signupError,
+    TResult Function(SignupSubmitPhoneNumberLoading<T> value)?
+        signupSubmitPhoneNumberLoading,
+    TResult Function(SignupSubmitPhoneNumberSuccess<T> value)?
+        signupSubmitPhoneNumberSuccess,
+    TResult Function(SignupSubmitPhoneNumberError<T> value)?
+        signupSubmitPhoneNumberError,
+    TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
+    TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
+    TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
+    required TResult orElse(),
+  }) {
+    if (signupSaveDataSuccess != null) {
+      return signupSaveDataSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignupSaveDataSuccess<T> implements SignupState<T> {
+  const factory SignupSaveDataSuccess() = _$SignupSaveDataSuccessImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$SignupSaveDataErrorImplCopyWith<T, $Res> {
+  factory _$$SignupSaveDataErrorImplCopyWith(_$SignupSaveDataErrorImpl<T> value,
+          $Res Function(_$SignupSaveDataErrorImpl<T>) then) =
+      __$$SignupSaveDataErrorImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$SignupSaveDataErrorImplCopyWithImpl<T, $Res>
+    extends _$SignupStateCopyWithImpl<T, $Res, _$SignupSaveDataErrorImpl<T>>
+    implements _$$SignupSaveDataErrorImplCopyWith<T, $Res> {
+  __$$SignupSaveDataErrorImplCopyWithImpl(_$SignupSaveDataErrorImpl<T> _value,
+      $Res Function(_$SignupSaveDataErrorImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$SignupSaveDataErrorImpl<T>(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SignupSaveDataErrorImpl<T> implements SignupSaveDataError<T> {
+  const _$SignupSaveDataErrorImpl({required this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'SignupState<$T>.signupSaveDataError(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignupSaveDataErrorImpl<T> &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SignupSaveDataErrorImplCopyWith<T, _$SignupSaveDataErrorImpl<T>>
+      get copyWith => __$$SignupSaveDataErrorImplCopyWithImpl<T,
+          _$SignupSaveDataErrorImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() signupLoading,
+    required TResult Function(T data) signupSuccess,
+    required TResult Function(String error) signupError,
+    required TResult Function() signupSubmitPhoneNumberLoading,
+    required TResult Function() signupSubmitPhoneNumberSuccess,
+    required TResult Function(String error) signupSubmitPhoneNumberError,
+    required TResult Function() signupSubmitOtpLoading,
+    required TResult Function() signupSubmitOtpSuccess,
+    required TResult Function(String error) signupSubmitOtpError,
+    required TResult Function() signupSaveDataLoading,
+    required TResult Function() signupSaveDataSuccess,
+    required TResult Function(String error) signupSaveDataError,
+  }) {
+    return signupSaveDataError(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? signupLoading,
+    TResult? Function(T data)? signupSuccess,
+    TResult? Function(String error)? signupError,
+    TResult? Function()? signupSubmitPhoneNumberLoading,
+    TResult? Function()? signupSubmitPhoneNumberSuccess,
+    TResult? Function(String error)? signupSubmitPhoneNumberError,
+    TResult? Function()? signupSubmitOtpLoading,
+    TResult? Function()? signupSubmitOtpSuccess,
+    TResult? Function(String error)? signupSubmitOtpError,
+    TResult? Function()? signupSaveDataLoading,
+    TResult? Function()? signupSaveDataSuccess,
+    TResult? Function(String error)? signupSaveDataError,
+  }) {
+    return signupSaveDataError?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? signupLoading,
+    TResult Function(T data)? signupSuccess,
+    TResult Function(String error)? signupError,
+    TResult Function()? signupSubmitPhoneNumberLoading,
+    TResult Function()? signupSubmitPhoneNumberSuccess,
+    TResult Function(String error)? signupSubmitPhoneNumberError,
+    TResult Function()? signupSubmitOtpLoading,
+    TResult Function()? signupSubmitOtpSuccess,
+    TResult Function(String error)? signupSubmitOtpError,
+    TResult Function()? signupSaveDataLoading,
+    TResult Function()? signupSaveDataSuccess,
+    TResult Function(String error)? signupSaveDataError,
+    required TResult orElse(),
+  }) {
+    if (signupSaveDataError != null) {
+      return signupSaveDataError(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SignupLoading<T> value) signupLoading,
+    required TResult Function(SignupSuccess<T> value) signupSuccess,
+    required TResult Function(SignupError<T> value) signupError,
+    required TResult Function(SignupSubmitPhoneNumberLoading<T> value)
+        signupSubmitPhoneNumberLoading,
+    required TResult Function(SignupSubmitPhoneNumberSuccess<T> value)
+        signupSubmitPhoneNumberSuccess,
+    required TResult Function(SignupSubmitPhoneNumberError<T> value)
+        signupSubmitPhoneNumberError,
+    required TResult Function(SignupSubmitOtpLoading<T> value)
+        signupSubmitOtpLoading,
+    required TResult Function(SignupSubmitOtpSuccess<T> value)
+        signupSubmitOtpSuccess,
+    required TResult Function(SignupSubmitOtpError<T> value)
+        signupSubmitOtpError,
+    required TResult Function(SignupSaveDataLoading<T> value)
+        signupSaveDataLoading,
+    required TResult Function(SignupSaveDataSuccess<T> value)
+        signupSaveDataSuccess,
+    required TResult Function(SignupSaveDataError<T> value) signupSaveDataError,
+  }) {
+    return signupSaveDataError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SignupLoading<T> value)? signupLoading,
+    TResult? Function(SignupSuccess<T> value)? signupSuccess,
+    TResult? Function(SignupError<T> value)? signupError,
+    TResult? Function(SignupSubmitPhoneNumberLoading<T> value)?
+        signupSubmitPhoneNumberLoading,
+    TResult? Function(SignupSubmitPhoneNumberSuccess<T> value)?
+        signupSubmitPhoneNumberSuccess,
+    TResult? Function(SignupSubmitPhoneNumberError<T> value)?
+        signupSubmitPhoneNumberError,
+    TResult? Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
+    TResult? Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
+    TResult? Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult? Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult? Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult? Function(SignupSaveDataError<T> value)? signupSaveDataError,
+  }) {
+    return signupSaveDataError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SignupLoading<T> value)? signupLoading,
+    TResult Function(SignupSuccess<T> value)? signupSuccess,
+    TResult Function(SignupError<T> value)? signupError,
+    TResult Function(SignupSubmitPhoneNumberLoading<T> value)?
+        signupSubmitPhoneNumberLoading,
+    TResult Function(SignupSubmitPhoneNumberSuccess<T> value)?
+        signupSubmitPhoneNumberSuccess,
+    TResult Function(SignupSubmitPhoneNumberError<T> value)?
+        signupSubmitPhoneNumberError,
+    TResult Function(SignupSubmitOtpLoading<T> value)? signupSubmitOtpLoading,
+    TResult Function(SignupSubmitOtpSuccess<T> value)? signupSubmitOtpSuccess,
+    TResult Function(SignupSubmitOtpError<T> value)? signupSubmitOtpError,
+    TResult Function(SignupSaveDataLoading<T> value)? signupSaveDataLoading,
+    TResult Function(SignupSaveDataSuccess<T> value)? signupSaveDataSuccess,
+    TResult Function(SignupSaveDataError<T> value)? signupSaveDataError,
+    required TResult orElse(),
+  }) {
+    if (signupSaveDataError != null) {
+      return signupSaveDataError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignupSaveDataError<T> implements SignupState<T> {
+  const factory SignupSaveDataError({required final String error}) =
+      _$SignupSaveDataErrorImpl<T>;
+
+  String get error;
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SignupSaveDataErrorImplCopyWith<T, _$SignupSaveDataErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -1,14 +1,17 @@
 import 'package:bazaar/Feature/auhtentication/signup/logic/sign_up_state.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/helper/shared_pref_helper.dart';
 import '../../../../core/utils/SharedPrefKeys.dart';
+import '../../data/model/user_model.dart';
 import '../../data/repository/authentication_repository.dart';
 
 class SignupCubit extends Cubit<SignupState> {
   final AuthenticationRepository _authRepository;
+
   SignupCubit(this._authRepository) : super(const SignupState.initial());
 
   TextEditingController nameController = TextEditingController();
@@ -47,6 +50,7 @@ class SignupCubit extends Cubit<SignupState> {
       emit(const SignupState.signupSubmitOtpLoading());
       _authRepository.submitOTP(
           otpCode: otpCode, verificationId: verificationId);
+      createUserData();
       emit(const SignupState.signupSubmitOtpSuccess());
     } on FirebaseAuthException catch (e) {
       debugPrint('Error linking phone number : ${e.code}');
@@ -57,4 +61,30 @@ class SignupCubit extends Cubit<SignupState> {
   Future<void> saveUserUid(String token) async {
     await SharedPrefHelper.setData(SharedPrefKeys.userUid, token);
   }
+
+
+  void createUserData() async {
+
+    try{
+      emit(const SignupState.signupSaveDataLoading());
+      // Create UserModel instance
+    UserModel user = UserModel(
+      name: nameController.text,
+      email: emailController.text,
+      address: '',
+      phone: phoneController.text,
+      imageUrl: '',
+    );
+
+    // Save user data to Firestore
+    await  _authRepository.saveUserData(user);
+    emit(const SignupState.signupSaveDataSuccess());
+
+    }catch(error,stacktrace ) {
+      FirebaseCrashlytics.instance.recordError(error, stacktrace);
+      emit(SignupState.signupSaveDataError(error: error.toString()));
+    }
+
+  }
+
 }

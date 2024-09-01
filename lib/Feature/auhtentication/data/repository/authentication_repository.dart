@@ -1,11 +1,17 @@
+import 'dart:io';
+
 import 'package:bazaar/Feature/auhtentication/signup/ui/otp_screen.dart';
 import 'package:bazaar/core/helper/extensions.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 import '../../../../core/networking/firebase_result.dart';
 import '../../../../core/routing/routes.dart';
+import '../model/user_model.dart';
 
 class AuthenticationRepository {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -19,8 +25,9 @@ class AuthenticationRepository {
       final response = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
       return FirebaseResult.success(response);
-    } catch (e) {
-      return FirebaseResult.failure(e.toString());
+    } catch (error,stacktrace ) {
+      FirebaseCrashlytics.instance.recordError(error, stacktrace);
+      return FirebaseResult.failure(error.toString());
     }
   }
 
@@ -31,8 +38,9 @@ class AuthenticationRepository {
       final response = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
       return FirebaseResult.success(response);
-    } catch (e) {
-      return FirebaseResult.failure(e.toString());
+    } catch (error,stacktrace ) {
+      FirebaseCrashlytics.instance.recordError(error, stacktrace);
+      return FirebaseResult.failure(error.toString());
     }
   }
 
@@ -40,17 +48,39 @@ class AuthenticationRepository {
     try {
       await _auth.sendPasswordResetEmail(email: email);
       return FirebaseResult.success(currentUser);
-    } catch (e) {
-      return FirebaseResult.failure(e.toString());
+    } catch (error,stacktrace ) {
+      FirebaseCrashlytics.instance.recordError(error, stacktrace);
+      return FirebaseResult.failure(error.toString());
     }
   }
+
+  Future<String> uploadImageToFirebase(File imageFile) async {
+    String fileName = DateTime.now().millisecondsSinceEpoch.toString();
+    firebase_storage.Reference ref = firebase_storage.FirebaseStorage.instance
+        .ref()
+        .child('user_images/$fileName');
+    firebase_storage.UploadTask uploadTask = ref.putFile(imageFile);
+    await uploadTask.whenComplete(() => null);
+    String downloadURL = await ref.getDownloadURL();
+    return downloadURL;
+  }
+
+  Future<void> saveUserData(UserModel user) async {
+    try {
+      await FirebaseFirestore.instance.collection('users').add(user.toMap());
+    } catch (e) {
+      // Handle errors
+      print('Error saving user data: $e');
+    }
+  }
+
 
   Future<void> signOut() async {
     try {
       await _auth.signOut();
       await _googleSignIn.signOut();
-    } catch (e) {
-      rethrow;
+    } catch (error,stacktrace ) {
+      return FirebaseCrashlytics.instance.recordError(error, stacktrace);
     }
   }
 
@@ -76,8 +106,9 @@ class AuthenticationRepository {
         );
       }
       return FirebaseResult.success(currentUser);
-    } catch (e) {
-      return FirebaseResult.failure(e.toString());
+    } catch (error,stacktrace ) {
+      FirebaseCrashlytics.instance.recordError(error, stacktrace);
+      return FirebaseResult.failure(error.toString());
     }
   }
 
@@ -85,15 +116,16 @@ class AuthenticationRepository {
       PhoneAuthCredential credential) async {
     try {
       return await _auth.signInWithCredential(credential);
-    } catch (e) {
-      rethrow;
+    } catch (error,stacktrace ) {
+        FirebaseCrashlytics.instance.recordError(error, stacktrace);
+        rethrow;
     }
   }
 
   // Phone Authentication
 
   Future<void> submitPhoneNumber(
-      String phoneNumber, BuildContext context) async {
+      String phoneNumber, BuildContext context,) async {
     try {
       if (currentUser != null) {
         await FirebaseAuth.instance.verifyPhoneNumber(
@@ -103,7 +135,6 @@ class AuthenticationRepository {
           verificationFailed: verificationFailed,
           codeSent: (verificationId, forceResendingToken) {
             debugPrint('Send code : $verificationId + $forceResendingToken');
-
             this.verificationId = verificationId;
             // NavigateInterface.navigateToPage();
             context.pushNamed(
@@ -119,6 +150,7 @@ class AuthenticationRepository {
       }
     } on FirebaseAuthException catch (e) {
       debugPrint('Error linking phone number : ${e.code}');
+
     }
   }
 
@@ -160,7 +192,8 @@ class AuthenticationRepository {
     try {
       await FirebaseAuth.instance.signInWithCredential(credential);
       debugPrint('success when sign in phone number');
-    } catch (error) {
+    } catch (error,stacktrace ) {
+      FirebaseCrashlytics.instance.recordError(error, stacktrace);
       debugPrint('error when sign in phone number: $error');
     }
   }
@@ -169,8 +202,9 @@ class AuthenticationRepository {
   Future<void> linkWithCredential(User user, AuthCredential credential) async {
     try {
       await user.linkWithCredential(credential);
-    } catch (e) {
-      debugPrint('linkWithCredential error : $e');
+    } catch (error,stacktrace ) {
+      FirebaseCrashlytics.instance.recordError(error, stacktrace);
+      debugPrint('linkWithCredential error : $error');
 
       // rethrow; // Rethrow to handle errors in the calling code
     }
@@ -180,7 +214,8 @@ class AuthenticationRepository {
   Future<void> unlinkFromCredential(User user, String providerId) async {
     try {
       await user.unlink(providerId);
-    } catch (e) {
+    } catch (error,stacktrace ) {
+      FirebaseCrashlytics.instance.recordError(error, stacktrace);
       rethrow;
     }
   }
