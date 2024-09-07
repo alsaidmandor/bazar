@@ -121,6 +121,7 @@ flutter:
     - assets/icons/category.svg
     - assets/icons/notification_background.svg
     - assets/images/
+    - assets/images/profile.svg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

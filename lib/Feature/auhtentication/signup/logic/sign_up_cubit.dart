@@ -21,12 +21,17 @@ class SignupCubit extends Cubit<SignupState> {
   final formKey = GlobalKey<FormState>();
   final formKeyPhone = GlobalKey<FormState>();
 
+  String defaultProfile =
+      'https://static.vecteezy.com/system/resources/previews/001/840/612/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg';
+
   void emitSignupStates() async {
     emit(const SignupState.signupLoading());
     final response = await _authRepository.createUserWithEmailAndPassword(
         email: emailController.text, password: passwordController.text);
     response.when(success: (signupResponse) async {
+      createUserData();
       await saveUserUid(signupResponse.user!.uid);
+
       emit(SignupState.signupSuccess(signupResponse));
     }, failure: (error) {
       emit(SignupState.signupError(error: error));
@@ -37,6 +42,8 @@ class SignupCubit extends Cubit<SignupState> {
     try {
       emit(const SignupState.signupSubmitPhoneNumberLoading());
       _authRepository.submitPhoneNumber(phoneController.text, context);
+      _authRepository.updateUserPhone(phoneController.text);
+
       emit(const SignupState.signupSubmitPhoneNumberSuccess());
     } on FirebaseAuthException catch (e) {
       debugPrint('Error linking phone number : ${e.code}');
@@ -50,7 +57,6 @@ class SignupCubit extends Cubit<SignupState> {
       emit(const SignupState.signupSubmitOtpLoading());
       _authRepository.submitOTP(
           otpCode: otpCode, verificationId: verificationId);
-      createUserData();
       emit(const SignupState.signupSubmitOtpSuccess());
     } on FirebaseAuthException catch (e) {
       debugPrint('Error linking phone number : ${e.code}');
@@ -62,29 +68,28 @@ class SignupCubit extends Cubit<SignupState> {
     await SharedPrefHelper.setData(SharedPrefKeys.userUid, token);
   }
 
-
   void createUserData() async {
-
-    try{
+    try {
       emit(const SignupState.signupSaveDataLoading());
       // Create UserModel instance
-    UserModel user = UserModel(
-      name: nameController.text,
-      email: emailController.text,
-      address: '',
-      phone: phoneController.text,
-      imageUrl: '',
-    );
+      UserModel userModel = UserModel(
+        name: nameController.text,
+        email: emailController.text,
+        phone: '',
+        imageUrl: defaultProfile,
+        address: 'Cairo', // You can get this from a user input if needed
+        id: _authRepository.currentUser!.uid, // Get the user's UID
+      );
 
-    // Save user data to Firestore
-    await  _authRepository.saveUserData(user);
-    emit(const SignupState.signupSaveDataSuccess());
-
-    }catch(error,stacktrace ) {
+      debugPrint('User Model: ${userModel.toMap()}'); // Print the user model data
+      debugPrint(
+          'user Model  : name : ${userModel.name} email : ${userModel.email} phone : ${userModel.phone}');
+      // Save userModel data to Firestore
+      await _authRepository.saveUserData(userModel);
+      emit(const SignupState.signupSaveDataSuccess());
+    } catch (error, stacktrace) {
       FirebaseCrashlytics.instance.recordError(error, stacktrace);
       emit(SignupState.signupSaveDataError(error: error.toString()));
     }
-
   }
-
 }

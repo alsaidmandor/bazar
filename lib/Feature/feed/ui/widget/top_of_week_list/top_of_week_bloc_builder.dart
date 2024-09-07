@@ -19,7 +19,7 @@ import '../see_all_shimmer_loading.dart';
 import '../see_all_widget.dart';
 
 class TopOfWeekBlocBuilder extends StatelessWidget {
-  const TopOfWeekBlocBuilder({Key? key}) : super(key: key);
+  const TopOfWeekBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
