@@ -53,6 +53,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
         children: [
           AppTextFormField(
             hintText: 'Email',
+            autoFillHint: const [AutofillHints.email],
             validator: (value) {
               if (value == null ||
                   value.isEmpty ||
@@ -66,6 +67,8 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
           AppTextFormField(
             controller: context.read<LoginCubit>().passwordController,
             hintText: 'Password',
+            autoFillHint: const [AutofillHints.password],
+
             isObscureText: isObscureText,
             suffixIcon: GestureDetector(
               onTap: () {

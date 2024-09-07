@@ -22,4 +22,10 @@ class SignupState<T> with _$SignupState<T> {
   const factory SignupState.signupSubmitOtpSuccess() = SignupSubmitOtpSuccess;
   const factory SignupState.signupSubmitOtpError({required String error}) =
       SignupSubmitOtpError;
+
+//   save user data
+  const factory SignupState.signupSaveDataLoading() = SignupSaveDataLoading;
+  const factory SignupState.signupSaveDataSuccess() = SignupSaveDataSuccess;
+  const factory SignupState.signupSaveDataError({required String error}) =
+      SignupSaveDataError;
 }

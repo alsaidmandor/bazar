@@ -55,16 +55,21 @@ class _SignupFormState extends State<SignupForm> {
         children: [
           AppTextFormField(
             hintText: 'Name',
+            autoFillHint: const [AutofillHints.name],
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return 'Please enter a valid name';
               }
+            },
+            onChange: (value) {
+              context.read<SignupCubit>().nameController.text= value ;
             },
             controller: context.read<SignupCubit>().nameController,
           ),
           verticalSpace(18),
           AppTextFormField(
             hintText: 'Email',
+            autoFillHint: const [AutofillHints.email],
             validator: (value) {
               if (value == null ||
                   value.isEmpty ||
@@ -72,12 +77,16 @@ class _SignupFormState extends State<SignupForm> {
                 return 'Please enter a valid email';
               }
             },
+            onChange: (p0) {
+
+            },
             controller: context.read<SignupCubit>().emailController,
           ),
           verticalSpace(18),
           AppTextFormField(
             controller: context.read<SignupCubit>().passwordController,
             hintText: 'Password',
+            autoFillHint: const [AutofillHints.password],
             isObscureText: isPasswordObscureText,
             suffixIcon: GestureDetector(
               onTap: () {
@@ -93,6 +102,9 @@ class _SignupFormState extends State<SignupForm> {
               if (value == null || value.isEmpty) {
                 return 'Please enter a valid password';
               }
+            },
+            onChange: (p0) {
+
             },
           ),
 

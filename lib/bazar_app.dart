@@ -1,4 +1,5 @@
 import 'package:bazaar/Feature/home/logic/home_cubit.dart';
+import 'package:bazaar/Feature/profile/ui/data/repository/profile_repo.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,6 +10,7 @@ import 'Feature/feed/data/repo/feed_repo.dart';
 import 'Feature/feed/logic/feed_cubit.dart';
 import 'Feature/home/ui/home_screen.dart';
 import 'Feature/onboarding/onboarding_screen.dart';
+import 'Feature/profile/ui/logic/profile_cubit.dart';
 import 'core/networking/dio_factory.dart';
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
@@ -35,6 +37,7 @@ class BazaarApp extends StatelessWidget {
             create: (context) =>
                 FeedCubit(FeedRepo(FeedApiService(dio)))..getBooksTopWeek(),
           ),
+
         ],
         child: MaterialApp(
           title: 'Bazaar App',

@@ -20,7 +20,7 @@ class AppTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final Function(String?) validator;
   final Function(String?)? onSaved;
-  final Function(String?)? onChange;
+  final Function(String)? onChange;
 
   final List<String>? autoFillHint;
 

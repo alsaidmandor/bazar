@@ -46,12 +46,13 @@ class _SignupPhoneFormState extends State<SignupPhoneForm> {
                 hintText: 'Phone Number',
                 prefixIcon: Padding(
                   padding: EdgeInsets.all(15.h),
-                  child: Icon(
+                  child: const Icon(
                     IconBroken.Call,
                     color: AppColor.primary500,
                   ),
                 ),
                 textInputType: TextInputType.phone,
+
                 validator: (value) {
                   if (value!.isEmpty) {
                     return 'Please enter your phone number!';

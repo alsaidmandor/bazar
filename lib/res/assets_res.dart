@@ -4,10 +4,10 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: lines_longer_than_80_chars
 class AssetsRes {
-  AssetsRes._();
-
+AssetsRes._();
   static const String PLUGIN_NAME = 'bazaar';
   static const String PLUGIN_VERSION = '1.0.1+1';
   static const String CATEGORY = 'assets/icons/category.svg';
   static const String NOTIFICATION_BACKGROUND = 'assets/icons/notification_background.svg';
+  static const String PROFILE = 'assets/images/profile.svg';
 }
