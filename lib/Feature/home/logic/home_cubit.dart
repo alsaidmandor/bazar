@@ -10,6 +10,8 @@ import '../../category/logic/category_cubit.dart';
 import '../../feed/data/apis/feed_api_service.dart';
 import '../../feed/data/repo/feed_repo.dart';
 import '../../feed/ui/feed_screen.dart';
+import '../../profile/ui/data/repository/profile_repo.dart';
+import '../../profile/ui/logic/profile_cubit.dart';
 import '../../profile/ui/profile_screen.dart';
 
 part 'home_state.dart';
@@ -28,7 +30,11 @@ class HomeCubit extends Cubit<HomeState> {
                 ),
             child: const CategoryScreen()),
         const CartScreen(),
-        const ProfileScreen()
+         BlocProvider(
+        create: (context) => ProfileCubit(ProfileRepo()),
+        child:     const ProfileScreen()
+    ),
+
       ];
 
   int currentIndex = 0;

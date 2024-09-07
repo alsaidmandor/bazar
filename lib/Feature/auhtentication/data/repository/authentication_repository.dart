@@ -67,22 +67,23 @@ class AuthenticationRepository {
 
   Future<void> saveUserData(UserModel user) async {
     try {
-      await FirebaseFirestore.instance.collection('users').add(user.toMap());
-    } catch (e) {
-      // Handle errors
-      print('Error saving user data: $e');
+      await FirebaseFirestore.instance.collection('users').doc(currentUser!.uid).set(user.toMap());
+    } catch(error,stacktrace ) {
+      FirebaseCrashlytics.instance.recordError(error, stacktrace);
     }
   }
 
-
-  Future<void> signOut() async {
+  Future<void> updateUserPhone(String phone) async {
     try {
-      await _auth.signOut();
-      await _googleSignIn.signOut();
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(currentUser!.uid)
+          .update({'phone': phone});
     } catch (error,stacktrace ) {
-      return FirebaseCrashlytics.instance.recordError(error, stacktrace);
+      FirebaseCrashlytics.instance.recordError(error, stacktrace);
     }
   }
+
 
   // Google Sign-In
   Future<FirebaseResult<User?>> signInWithGoogle( context) async {
