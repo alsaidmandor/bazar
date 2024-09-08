@@ -1,8 +1,5 @@
-import 'package:bazaar/Feature/profile/ui/logic/profile_cubit.dart';
-import 'package:bazaar/Feature/profile/ui/widget/my_account/my_account_bloc_builder.dart';
 import 'package:bazaar/core/helper/extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
