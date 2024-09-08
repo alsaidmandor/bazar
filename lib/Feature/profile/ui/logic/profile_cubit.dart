@@ -19,6 +19,13 @@ class ProfileCubit extends Cubit<ProfileState> {
   final ProfileRepo _profileRepo ;
   ProfileCubit(this._profileRepo) : super(const ProfileState.initial());
 
+  // Text Controller
+  TextEditingController nameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
+
   void getUserData() async {
     emit(const ProfileState.getDataUserLoading());
     try {
@@ -35,17 +42,17 @@ class ProfileCubit extends Cubit<ProfileState> {
   }
 
 //   image picker
-  File? _imageFile;
+  File? imageFile;
 
-  Future<void> _pickImage() async {
+  Future<void> pickImage() async {
     final picker = ImagePicker();
     final pickedFile = await picker.pickImage(source: ImageSource.gallery);
 
     if (pickedFile != null) {
-        _imageFile = File(pickedFile.path);
-        emit(ProfileState.pickedImage(imageFile: _imageFile!));
-
+        imageFile = File(pickedFile.path);
     }
+    emit(ProfileState.pickedImage(imageFile: imageFile!));
+
   }
 
   void logOutAuthentication()async
@@ -63,6 +70,34 @@ class ProfileCubit extends Cubit<ProfileState> {
   }
   Future<void> removeUserUid() async {
     await SharedPrefHelper.removeData(SharedPrefKeys.userUid);
+  }
+
+
+
+  Future<void> updateProfile()
+  async {
+    emit(const ProfileState.updateProfileLoading());
+
+    try{
+      if (imageFile != null)
+      {
+        // Upload image and get download URL
+        String imageUrl =  await _profileRepo.uploadImage(imageFile!);
+        UserModel model = UserModel(
+          id: _profileRepo.currentUser!.uid,
+            name: nameController.text,
+            email: emailController.text,
+            phone: phoneController.text,
+            imageUrl:imageUrl
+        );
+        print( nameController.text);
+        _profileRepo.updateProfile(model);
+        emit(const ProfileState.updateProfileSuccess());
+      }
+    }catch(error, stacktrace) {
+      FirebaseCrashlytics.instance.recordError(error, stacktrace);
+      emit( ProfileState.updateProfileError(error: error.toString()) );
+    }
   }
 
 
