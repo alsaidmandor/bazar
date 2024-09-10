@@ -122,6 +122,37 @@ flutter:
     - assets/icons/notification_background.svg
     - assets/images/
     - assets/images/profile.svg
+    - assets/screenshots/Screenshot_20240830_203332.png
+    - assets/screenshots/all_category_screen_2.png
+    - assets/screenshots/authors_details_screen.png
+    - assets/screenshots/authors_screen_1.png
+    - assets/screenshots/authors_screen_2.png
+    - assets/screenshots/book_details.png
+    - assets/screenshots/cart_screen_empry.png
+    - assets/screenshots/category_loading_screen_1.png
+    - assets/screenshots/category_screen_empty.png
+    - assets/screenshots/feed_screen_1.png
+    - assets/screenshots/feed_screen_2.png
+    - assets/screenshots/feed_screen_3.png
+    - assets/screenshots/home_Screen_empty.png
+    - assets/screenshots/login_screen.png
+    - assets/screenshots/love_category_screen_3.png
+    - assets/screenshots/onboarding_1.png
+    - assets/screenshots/onboarding_2.png
+    - assets/screenshots/onboarding_3.png
+    - assets/screenshots/profile_screen.png
+    - assets/screenshots/profile_screen_empty.png
+    - assets/screenshots/reset_password_screen.png
+    - assets/screenshots/search_screen_1.png
+    - assets/screenshots/search_screen_2.png
+    - assets/screenshots/search_screen_3.png
+    - assets/screenshots/signup_phone_screen.png
+    - assets/screenshots/signup_screen_1.png
+    - assets/screenshots/signup_screen_2.png
+    - assets/screenshots/spalsh_screen.png
+    - assets/screenshots/success_vrification.png
+    - assets/screenshots/update_profile_screen.png
+    - assets/screenshots/verification_phone_screen.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -136,7 +167,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: IconBroken
+    - family: icons
       fonts:
         - asset: assets/font/icons.ttf
   # fonts:
