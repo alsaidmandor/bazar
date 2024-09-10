@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/theme/colors.dart';
 import '../../../auhtentication/data/model/user_model.dart';
+import '../profile_screen.dart';
 
 class UserDataBlocBuilder extends StatelessWidget {
   const UserDataBlocBuilder({super.key});
@@ -15,6 +16,7 @@ class UserDataBlocBuilder extends StatelessWidget {
       buildWhen: (previous, current) =>
       current is GetDataUserLoading ||
           current is GetDataUserSuccess ||
+          current is UpdateProfileSuccess ||
           current is GetDataUserError,
       builder: (context, state) {
         return state.maybeWhen(
@@ -24,6 +26,7 @@ class UserDataBlocBuilder extends StatelessWidget {
           getDataUserSuccess: (model){
             return setupSuccess(model);
           },
+          updateProfileSuccess: () =>refreshProfileScreen() ,
           getDataUserError: (errorHandler) => setupError(),
           orElse: () => setupError(),
         );
@@ -42,6 +45,9 @@ class UserDataBlocBuilder extends StatelessWidget {
     return ProfileBodyWidget(model: model,);
   }
 
+  Widget refreshProfileScreen(){
+    return ProfileScreen();
+  }
   Widget setupError() {
     return const SizedBox.shrink();
   }

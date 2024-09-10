@@ -22,32 +22,45 @@ class PickedImageProfileWidget extends StatelessWidget {
       height: 180,
       child: Column(
         children: [
-          CircleAvatar(
-            radius: 50,
-            backgroundColor: AppColor.greyScale500,
-            child:ProfileState.pickedImage != null
-                ? const PickedImageBlocBuilder()
-                : CachedNetworkImage(
-                    imageUrl: model.imageUrl!,
-                    imageBuilder: (context, imageProvider) => ClipOval(
-                      child: Image(
-                        image: imageProvider,
-                        fit: BoxFit.cover,
-                        width: 100,
-                        height: 100,
+          BlocBuilder<ProfileCubit, ProfileState>(
+            builder: (context, state) {
+              if(state is PickedImage) {
+                return const CircleAvatar(
+                radius: 50,
+                backgroundColor: AppColor.greyScale500,
+                child:
+                     PickedImageBlocBuilder()
+
+              );
+              }
+              return CircleAvatar                  (
+                radius: 50,
+                backgroundColor: AppColor.greyScale500,
+                child: CachedNetworkImage(
+                  imageUrl: model.imageUrl!,
+                  imageBuilder: (context, imageProvider) =>
+                      ClipOval(
+                        child: Image(
+                          image: imageProvider,
+                          fit: BoxFit.cover,
+                          width: 100,
+                          height: 100,
+                        ),
                       ),
-                    ),
-                    placeholder: (context, url) => Shimmer.fromColors(
-                      baseColor: AppColor.greyScale100,
-                      highlightColor: Colors.white,
-                      child: const CircleAvatar(
-                        radius: 50,
-                        backgroundColor: Colors.white,
+                  placeholder: (context, url) =>
+                      Shimmer.fromColors(
+                        baseColor: AppColor.greyScale100,
+                        highlightColor: Colors.white,
+                        child: const CircleAvatar(
+                          radius: 50,
+                          backgroundColor: Colors.white,
+                        ),
                       ),
-                    ),
-                    errorWidget: (context, url, error) =>
-                        const Icon(Icons.error),
-                  ),
+                  errorWidget: (context, url, error) =>
+                  const Icon(Icons.error),
+                ),
+              );
+            },
           ),
           verticalSpace(15),
           AppTextButton(

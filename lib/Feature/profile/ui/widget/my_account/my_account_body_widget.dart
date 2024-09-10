@@ -35,7 +35,9 @@ class MyAccountBodyWidget extends StatelessWidget {
             buttonText: 'Save Changes',
             textStyle: TextStyles.font16WhiteSemiBold,
             onPressed: () {
-              context.read<ProfileCubit>().updateProfile();
+              context.read<ProfileCubit>().updateProfile(model);
+              context.read<ProfileCubit>().getUserData();
+              context.pop();
 
             },
 

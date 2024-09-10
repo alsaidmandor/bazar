@@ -7,7 +7,6 @@ import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../core/helper/shared_pref_helper.dart';
-import '../../../../core/networking/firebase_result.dart';
 import '../../../../core/utils/SharedPrefKeys.dart';
 import '../data/repository/profile_repo.dart';
 
@@ -74,7 +73,7 @@ class ProfileCubit extends Cubit<ProfileState> {
 
 
 
-  Future<void> updateProfile()
+  Future<void> updateProfile(UserModel model)
   async {
     emit(const ProfileState.updateProfileLoading());
 
@@ -83,17 +82,22 @@ class ProfileCubit extends Cubit<ProfileState> {
       {
         // Upload image and get download URL
         String imageUrl =  await _profileRepo.uploadImage(imageFile!);
-        UserModel model = UserModel(
-          id: _profileRepo.currentUser!.uid,
+        UserModel userModel = model.copyWith(
             name: nameController.text,
             email: emailController.text,
             phone: phoneController.text,
             imageUrl:imageUrl
         );
-        print( nameController.text);
-        _profileRepo.updateProfile(model);
+        _profileRepo.updateProfile(userModel);
         emit(const ProfileState.updateProfileSuccess());
       }
+      UserModel userModel = model.copyWith(
+        name: nameController.text,
+        email: emailController.text,
+        phone: phoneController.text,
+      );
+      _profileRepo.updateProfile(userModel);
+      emit(const ProfileState.updateProfileSuccess());
     }catch(error, stacktrace) {
       FirebaseCrashlytics.instance.recordError(error, stacktrace);
       emit( ProfileState.updateProfileError(error: error.toString()) );

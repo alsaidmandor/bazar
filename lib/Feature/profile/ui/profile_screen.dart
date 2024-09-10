@@ -1,16 +1,9 @@
 import 'package:bazaar/Feature/profile/ui/widget/user_data_bloc_builder.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shimmer/shimmer.dart';
 
-import '../../../core/helper/spacing.dart';
-import '../../../core/theme/colors.dart';
-import '../../../core/theme/icon_broken.dart';
 import '../../../core/theme/styles.dart';
-import '../../../core/widgets/svg_image.dart';
-import '../../../res/assets_res.dart';
 import 'logic/profile_cubit.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -31,6 +24,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
       // Trigger loading logic or fetch profile data here, outside of the build method
       context.read<ProfileCubit>().getUserData();
     });
+  }
+
+  @override
+  void didUpdateWidget(covariant ProfileScreen oldWidget) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      // Trigger loading logic or fetch profile data here, outside of the build method
+      context.read<ProfileCubit>().getUserData();
+    });    super.didUpdateWidget(oldWidget);
   }
   @override
   Widget build(BuildContext context) {
