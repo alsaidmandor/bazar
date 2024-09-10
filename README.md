@@ -7,7 +7,7 @@
 
 **Bazar** is a Flutter application for booking and managing books. The app allows users to browse available books, reserve them, and manage bookings. It also integrates Google Maps for location-based services and Firebase Cloud Messaging (FCM) for notifications.
 
-## ![App Logo]([assets/logo.png](https://github.com/alsaidmandor/bazar/blob/development/assets/images/app_logo.png))
+![App Logo](https://github.com/alsaidmandor/bazar/blob/development/assets/images/app_logo.png)
 
 ## Features
 
@@ -23,17 +23,14 @@ You can view the app design on Figma: [Bazar - Books Mobile App](https://www.fig
 
 ## Screenshots
 
-<p float="left" align="center">
-  <br>Splash Screen
-  <img src="https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/spalsh_screen.png" width="200" />
-  <br>OnBoarding Screen one
-  <img src="https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/onboarding_1.png" width="200" />
- <br>OnBoarding Screen two
-  <img src="https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/onboarding_2.png" width="200" />
-<br>OnBoarding Screen Three
-  <img src="https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/onboarding_3.png" width="200" />
+## Screenshots
 
-</p>
+Here are some screenshots of the app:
+
+| Splash Screen | Onboarding 1 | Onboarding 2 |
+|:--------------:|:-------------:|:-------------:|
+| ![Splash Screen](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/spalsh_screen.png) | ![Onboarding 1](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/onboarding_1.png) | ![Onboarding 2](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/onboarding_2.png) |
+
 
 *Add screenshots of your app here for a visual overview.*
 
