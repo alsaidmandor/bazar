@@ -1,6 +1,8 @@
 import 'package:bazaar/Feature/profile/ui/widget/user_data_and_log_out_widget.dart';
+import 'package:bazaar/core/helper/extensions.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../../../../core/theme/styles.dart';
 import '../../../auhtentication/data/model/user_model.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,7 +30,9 @@ class ProfileBodyWidget extends StatelessWidget {
           color: AppColor.greyScale500,
         ),
         ListTile(
-          onTap: () {},
+          onTap: () {
+            context.pushNamed(Routes.updateProfileScreen,arguments: model);
+          },
           leading: const Icon(IconBroken.Profile, color: AppColor.primary500,),
           title: Text(
             'My Account',

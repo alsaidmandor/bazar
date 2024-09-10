@@ -35,28 +35,26 @@ class ProfileRepo {
   }
 
 
-  Future<FirebaseResult<void>> updateProfile(UserModel user) async {
+  Future<void> updateProfile(UserModel user) async {
     try {
       await _firestore.collection('users').doc(user.id).update(user.toMap());
-      return const FirebaseResult.success(null);
     } on FirebaseException catch (error, stacktrace) {
       FirebaseCrashlytics.instance.recordError(error, stacktrace);
-      return FirebaseResult.failure(error.toString());
     }
   }
 
 
-  Future<FirebaseResult<String>> uploadImage(File imageFile) async {
+  Future<String> uploadImage(File imageFile) async {
     try {
       final ref = _storage.ref().child('user_images/${DateTime
           .now()
           .millisecondsSinceEpoch}');
       final task = await ref.putFile(imageFile);
       final url = await task.ref.getDownloadURL();
-      return FirebaseResult.success(url);
+      return url;
     } on FirebaseException catch (error, stacktrace) {
       FirebaseCrashlytics.instance.recordError(error, stacktrace);
-      return FirebaseResult.failure(error.toString());
+      return error.toString();
     }
   }
 

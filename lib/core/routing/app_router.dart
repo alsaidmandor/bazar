@@ -4,10 +4,12 @@ import 'package:bazaar/Feature/auhtentication/signup/ui/otp_screen.dart';
 import 'package:bazaar/Feature/auhtentication/signup/ui/sign_up_screen.dart';
 import 'package:bazaar/Feature/feed/ui/widget/authors_list/author_details_screen.dart';
 import 'package:bazaar/Feature/onboarding/onboarding_screen.dart';
+import 'package:bazaar/Feature/profile/ui/logic/profile_cubit.dart';
 import 'package:bazaar/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../Feature/auhtentication/data/model/user_model.dart';
 import '../../Feature/auhtentication/data/repository/authentication_repository.dart';
 import '../../Feature/auhtentication/login/logic/cubit/login_cubit.dart';
 import '../../Feature/auhtentication/login/ui/forget_password_screen.dart';
@@ -18,6 +20,8 @@ import '../../Feature/feed/ui/authors_screen.dart';
 import '../../Feature/feed/ui/search_books_screen.dart';
 import '../../Feature/home/logic/home_cubit.dart';
 import '../../Feature/home/ui/home_screen.dart';
+import '../../Feature/profile/ui/data/repository/profile_repo.dart';
+import '../../Feature/profile/ui/widget/my_account/update_profile_screen.dart';
 import 'custom_route.dart';
 
 class AppRouter {
@@ -102,6 +106,15 @@ class AppRouter {
       case Routes.searchBooksScreen:
         return SlideTopRoute(builder: (BuildContext context) {
           return  const SearchBooksScreen();
+        });
+      case Routes.updateProfileScreen:
+        final args = settings.arguments as UserModel ;
+        return SlideRightRoute(builder: (BuildContext context) {
+          return BlocProvider(
+            create: (context) =>ProfileCubit(ProfileRepo()),
+            child:  UpdateProfileScreen(model: args,));
+
+
         });
       default:
         return null;
