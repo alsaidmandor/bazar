@@ -24,16 +24,19 @@ You can view the app design on Figma: [Bazar - Books Mobile App](https://www.fig
 
 ## Screenshots
 
-## Screenshots
-
-Here are some screenshots of the app:
-
-| Splash Screen | Onboarding 1 | Onboarding 2 |                                                Onboarding 3                                                 |
-|:--------------:|:-------------:|:-------------:|:-----------------------------------------------------------------------------------------------------------:|
-| ![Splash Screen](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/spalsh_screen.png) | ![Onboarding 1](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/onboarding_1.png) | ![Onboarding 2](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/onboarding_2.png) | ![Onboarding 3](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/onboarding_3.png) |
-
-
 *Add screenshots of your app here for a visual overview.*
+
+|                                                 Splash Screen                                                 |                                                          Onboarding 1                                                           |                                                   Onboarding 2                                                   |                                                       Onboarding 3                                                        |
+|:-------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------:|
+| ![Splash Screen](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/spalsh_screen.png) |           ![Onboarding 1](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/onboarding_1.png)           |   ![Onboarding 2](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/onboarding_2.png)    |        ![Onboarding 3](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/onboarding_3.png)        |
+|                                                 Login Screen                                                  |                                                         SignupScreen 1                                                          |                                                  SignupScreen 2                                                  |                                                    SignupScreen Phone                                                     |
+|                                               :--------------:                                                |                                                         :-------------:                                                         |                                                 :-------------:                                                  |       :-----------------------------------------------------------------------------------------------------------:       |
+|  ![Login Screen](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/login_screen.png)  |        ![SignupScreen 1](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/signup_screen_1.png)         | ![SignupScreen 2](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/signup_screen_1.png) | ![SignupScreen Phone ](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/signup_phone_screen.png) |
+|                                           VerificationPhone Screen                                            |                                                    SuccessVrification Screen                                                    |                                                   FeedScreen 1                                                   |                                                       FeedScreen 2                                                        |
+|                                               :--------------:                                                |                                                         :-------------:                                                         |                                                 :-------------:                                                  |       :-----------------------------------------------------------------------------------------------------------:       |
+|  ![VerificationPhone Screen](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/verification_phone_screen.png)  | ![SuccessVrification Screen](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/success_vrification.png) |   ![FeedScreen 1](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/feed_screen_3.png)   |    ![FeedScreen 2 ](https://github.com/alsaidmandor/bazar/blob/development/assets/screenshots/feed_screen_1.png)    |
+
+
 
 ## Getting Started
 
