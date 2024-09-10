@@ -7,6 +7,8 @@
 
 **Bazar** is a Flutter application for booking and managing books. The app allows users to browse available books, reserve them, and manage bookings. It also integrates Google Maps for location-based services and Firebase Cloud Messaging (FCM) for notifications.
 
+## ![App Logo]([assets/logo.png](https://github.com/alsaidmandor/bazar/blob/development/assets/images/app_logo.png))
+
 ## Features
 
 - Browse a wide selection of books.
